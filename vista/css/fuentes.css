@@ -1,0 +1,11 @@
+@font-face{font-family:AllerEmb;src:url("/v4cima/vista/fuentes/Aller_Bd.ttf") format("truetype");}
+@font-face{font-family:Aller_Rg;src:url("/v4cima/vista/fuentes/Aller_Rg.ttf") format("truetype");}
+@font-face{font-family:Aller;src:url("/v4cima/vista/fuentes/Aller_LtIt.ttf") format("truetype");}
+@font-face{font-family:Aller_Lt;src:url("/v4cima/vista/fuentes/Aller_Lt.ttf") format("truetype");}
+@font-face{font-family:DeVinneOrn;src:url("../fuentes/DeVinneOrn.ttf") format("truetype");}
+@font-face{font-family:LetraDigital;src:url("../fuentes/digital.ttf") format("truetype");}
+@font-face{font-family:Escolar;src:url("/v4cima/vista/fuentes/Edm.ttf") format("truetype");}
+
+tr.highlighted td {
+    background: #FFF8DC;
+}

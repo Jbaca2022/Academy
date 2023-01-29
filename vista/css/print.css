@@ -1,0 +1,18 @@
+@media print{
+    #tbl-ordenmerito-print{
+        font-size: 9px;
+    }
+    table.dataTable thead th, table.dataTable thead td {
+        padding: 0px 0px;
+        border-bottom: 1px solid #111;
+    }
+    table.dataTable tbody th, table.dataTable tbody td {
+        padding: 4px 4px;
+    }
+    #tbl-ordenmerito-print_length,
+    #tbl-ordenmerito-print_filter,
+    #tbl-ordenmerito-print_info,
+    #tbl-ordenmerito-print_paginate{
+        display: none;
+    }    
+}
