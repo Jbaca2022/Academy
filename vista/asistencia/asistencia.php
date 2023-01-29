@@ -76,13 +76,10 @@
                             <table id="tbl-asistencia" class="display" cellspacing="0" width="100%">
                                 <thead class="cabecera">
                                     <tr>
-                                        <th>Código</th>
+                                        <th>Documento</th>
                                         <th>Apellido y Nombres</th>
                                         <th width="20%">Descripción</th>
-                                        <th>Aula</th>
-                                        <th>Nº</th>
-                                        <th width="20%">Ciclo / Año</th>
-                                        <th></th>
+                                        <th>Asistencia</th>
                                     </tr>
                                 </thead>
                                 <tbody id="tbody-asistencia">

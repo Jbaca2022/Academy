@@ -7,14 +7,20 @@ function cargar_asistencia() {
         caso: 1
     }, function (data) {
         console.log(data);
-        /* if (data != null) {
+         if (data != null) {
             var html = '';
-            html += '<option value = "0"> SELECCIONAR </option>';
             for (var i = 0; i < data.length; i++) {
-                html += '<option data-tipo="' + data[i].tipo + '" value="' + data[i].id + '" >' + data[i].nombre + '</option>';
+                html += '<tr>'
+                html += "   <td>" + data[i]._documento + "</td>";
+                html += "   <td>" + data[i]._nombre + data[i]._apellido  + "</td>";
+                html += "   <td>" + data[i]._rol + "</td>";
+                html += "   <td>" + data[i]._asistencia + "</td>";
+                html += '</tr>'
+
+
             }
-            $('#select_annociclo').html(html);
-        } */
+            $('#tbody-asistencia').html(html);
+        } 
     }, 'json');
   }
 

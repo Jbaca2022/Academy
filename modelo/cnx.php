@@ -2,7 +2,7 @@
 
 //Conexion Academia POSTGRESQL
 function conectaPgSQL() {
-     $servidor = 'localhost';    
+     $servidor = '192.168.1.8';    
     $port = 5433;
     $usuario = 'postgres';
     $clave = 'root';
