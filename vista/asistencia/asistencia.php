@@ -27,7 +27,7 @@
         <script type="text/javascript" src="../js/script_index2.0.js"></script>
 
         <!--PROPIOS-->
-        <link href="css/asistencia2.0.css" rel="stylesheet" type="text/css" />
+        <link href="../css/asistencia2.0.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="../js/script_asistencia.js"></script>
         <!--PROPIOS-->
         <title></title>
@@ -113,7 +113,6 @@
                                 <tr>
                                     <th>FECHA</th>
                                     <th>HORA</th>
-                                    <th>MODALIDAD</th>
                                     <th></th>
                                 </tr>
                             </thead>

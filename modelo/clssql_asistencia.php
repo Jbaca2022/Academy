@@ -29,6 +29,14 @@ class clssql_asistencia {
 		$sql=" select * from fn_asistencia_detalle_alumno($id)";
 		$rsql = $this->select($sql);
 		return $rsql;		
+	}
+	function eliminar_asistencia($id){
+		$sql=" select * from fn_asistencia_delete($id)";
+		$rsql = $this->select($sql);
+		return $rsql;		
 	}	
+	
+
+	
 }
 ?>

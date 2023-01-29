@@ -8,7 +8,7 @@ $(document).ready(function () {
             if (data != null) {
                 var html = '';
                 for (var i = 0; i < data.length; i++) {
-                    html += '<tr class="tr-persona" id="'+ data[i]._id+'" data-nombre="'+ data[i]._nombre + " " + data[i]._apellido +'">'
+                    html += '<tr class="tr-persona" id="'+ data[i]._id+'" data-nombre="'+ data[i]._nombre + " " + data[i]._apellido +'" data-id="'+  data[i]._id +'"> '
                     html += "   <td>" + data[i]._documento + "</td>";
                     html += "   <td>" + data[i]._nombre + " " + data[i]._apellido  + "</td>";
                     html += "   <td>" + data[i]._rol + "</td>";
@@ -153,11 +153,39 @@ $(document).ready(function () {
     }
 
     function ver_detalle_asistencia(element) {
+        console.log(element);
         $("#tbody-detalle-asistencia").html("");
         $(".vent-asistencia").modal("show");
         id = $(element).data("id");
-        $("#footer-alumno").html($("#" + id).data("persona"));
-        $.getJSON(
+        console.log(id);
+        $("#footer-alumno").html($("#" + id).data("nombre"));
+        $.post('../../controlador/load_asistencia.php', {
+            caso: 3, id: id
+        }, function (data) {
+            if (data != null) {
+                var html;
+                for (i = 0; i < data.length; i++) {
+                html += '<tr id="tr-' + data[i]._id + '">';
+                html += "   <td>" + data[i]._dia + "</td>";
+                html += "   <td>" + data[i]._hora + "</td>";
+                html +=
+                    '   <td id="' +
+                    data[i]._id +
+                    '" data-idalumno="' +
+                    data[i]._persona +
+                    '" class="delete-asistencia">';
+                html +=
+                    '       <span class="glyphicon glyphicon-trash close"></span>';
+                html += "   </td>";
+                html += "</tr>";
+                }
+                $("#tbody-detalle-asistencia").html(html);           
+            } 
+        }, 'json');
+
+
+
+       /*  $.getJSON(
             "../controlador/load_asistencia.php?caso=9",
             {
             idalumno: id,
@@ -186,7 +214,7 @@ $(document).ready(function () {
                 $("#tbody-detalle-asistencia").html(html);
             }
             }
-        );
+        ); */
     }
 
     $("#tbl-asistencia").on("click", ".span-ver-asistencia", function () {
@@ -211,18 +239,14 @@ $(document).ready(function () {
             cancelButton: "[No]",
             keyboardEnabled: true,
             confirm: function () {
-            /*$.get(
-                "../controlador/load_asistencia.php?caso=10",
-                {
-                id: idasistencia
-                },
-                function () {
-                $("#td-asistencia" + id).html(
-                    Number($("#td-asistencia" + id).html()) - 1
-                );
-                $("#tr-" + idasistencia).remove();
-                }
-            );*/
+                $.post('../../controlador/load_asistencia.php', {
+                    caso: 4, id: idasistencia
+                }, function (data) {
+                    $("#td-asistencia" + id).html(
+                        Number($("#td-asistencia" + id).html()) - 1
+                    );
+                    $("#tr-" + idasistencia).remove();
+                }, 'json');
             },
             cancel: function () {
             //$.alert('Canceled!')

@@ -36,5 +36,13 @@ switch ($caso) {
         }
         echo json_encode($Json);
         break;
+    case 4:
+        $id = $_POST['id'];
+        $fila = $obj->eliminar_asistencia($id);
+        while ($row = pg_fetch_assoc($fila)) {
+            $Json[] = $row;
+        }
+        echo json_encode($Json);
+        break;        
     }
     ?>
