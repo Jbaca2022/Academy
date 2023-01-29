@@ -6,13 +6,8 @@
     align-items: center;
     align-self: flex-end;
     justify-content: center;
-}
-
-@media (min-width: 1200px){
-    .right{
-        position: absolute;
-        right: 12%;
-    }
+    position: absolute;
+    left: 75vh;
 }
 
 .text-light{

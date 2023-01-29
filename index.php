@@ -17,9 +17,9 @@ session_start();
         <link href="vista/css/fuentes.css" rel="stylesheet">
         <link href="vista/css/index.css" rel="stylesheet">
         <link href="vista/css/auth.css" rel="stylesheet">
-        <link href="vista/css/navbar_index.css" rel="stylesheet">
         <link href="vista/css/jquery-confirm.css" rel="stylesheet" type="text/css" />
-
+        
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
         <script type="text/javascript" src="vista/js/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="vista/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="vista/js/script_index.js"></script>
@@ -27,35 +27,41 @@ session_start();
         <script type="text/javascript" src="vista/js/jquery-confirm.min.js"></script>
     </head>
     <body>
-        <!-- Navigation -->
+
         <?php include 'vista/navbar.html' ?>
-        <!-- Navigation --> 
-        <section class="card container auth-container right ">
-            <div class="formlogeo">
-                <div class="row">
-                    <div class="text-center">
-                        <img src="vista/img/logo.png" class="img-circle">
-                    </div>
-                </div>
-                <hr>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="form-group">
-                            <div class="input-group">
-                                <label for="txtusuario" class="form-label text-light">Usuario</label>
-                                <input value="" id="txtusuario" type="password" class="form-control" placeholder="Escriba nombre de usario">
-                            </div>
-                            <p></p>
-                            <div class="input-group">
-                                <label for="txtpassword" class="form-label text-light">Contraseña</label>
-                                <input value="" id="txtpassword" type="password" class="form-control" placeholder="Ingresa contraseña"/>
-                            </div>
-                            <hr>
-                            <button class="btn btn-primary btn-block" id="btnlogeo">INGRESAR</button>
+
+        <div class="row">
+            <section class="col-md-6" id="image-login">
+            </section>
+            <section class="col-md-6" id="auth-content">
+                <article class="card">
+                    <section class="card-body">
+                        <div action="" class="sh-form form-group">
+                            <section class="auth_thumb sh-mb-3">
+                                <img src="vista/img/nasa.png"
+                                alt="logo" class="img-fluid">
+                            </section>
+                            <h2 class="auth_title sh-mb-3">
+                                Inicio de sesión
+                            </h2>
+                            <div class="auth_separator"></div>
+                            <section>
+                                <div class="input-group">
+                                    <label for="txtusuario" class="form-label">Usuario</label>
+                                    <input value="" id="txtusuario" type="text" class="form-control" placeholder="Escriba nombre de usario">
+                                </div>
+                                <p></p>
+                                <div class="input-group">
+                                    <label for="txtpassword" class="form-label">Contraseña</label>
+                                    <input value="" id="txtpassword" type="password" class="form-control" placeholder="Ingresa contraseña"/>
+                                </div>
+                                <p id="errorLog"> Contraseña o usuario incorrecto</p>
+                                <button class="btn btn-primary btn-block" id="btnlogeo">INGRESAR</button>
+                            </section>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                    </section>
+                </article>
+            </section>
+        </div>
     </body>
 </html>

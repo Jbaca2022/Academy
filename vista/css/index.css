@@ -1,19 +1,88 @@
-body * {
-    background: none;
+*{
+    margin: 0;
+    padding: 0; 
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    color: #3C3C3C;
 }
 
-.card {    
-    background: linear-gradient(to bottom, rgba(146, 135, 187, 0.6) 0%, rgba(0, 0, 0, 0.8) 100%);;
-    padding: 20px 25px 30px;
-    margin-top: 100px;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 10px;
-    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-    width: 95%;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+.row{
+    width: 100vw;
+    margin: 0;
+}
+
+#image-login, #auth-content{
+    padding: 0;
+    height: 100vh;
+}
+
+#image-login{
+    background-image: url('../img/fondo.jpg');
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    background-size:cover;
+    -o-background-size:cover;
+}
+
+.card{
+    height: 100vh;
+    padding: 20px 128px;
+}
+
+.sh-form {
+    flex: 1;
+}
+
+.card-body{
+    display: flex;
+    align-items: center;
+}
+
+.auth_thumb{
+    display: flex;
+    justify-content: center;
+    height: 85px;
+    margin-top: 15vh;
+    margin-bottom: 2.5rem;
+}
+
+.auth_title{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;        
+    margin-bottom: 1.4rem;
+}
+.auth_separator{
+    width: 100%;
+    height: 0.5px;
+    background-color: #8E8E8E;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+    margin-top: 10px;
+}
+
+.input-group{
+    margin-right: 0;
+    width: 100%;
+}
+
+#btnlogeo{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+    font-size: 1.7rem;
+}
+
+#errorLog{
+    margin-top: 1.5rem;
+    color: red;
+    text-align: center;
+    display: none;
 }
