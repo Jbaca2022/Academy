@@ -1,26 +1,3 @@
-body{
-    margin-top:55px;
-}
-.font-cima{
-    font-family:DeVinneOrn;
-    font-size:50px;
-}
-.fondo-azul{
-    background-image:url(../../vista/img/fondo_cabecera.png);
-    background-repeat:repeat-x;
-    color:#ffffff;
-}
-.full{
-    background:url('../../vista/img/fondo.jpg') no-repeat center center fixed;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    background-size:cover;
-    -o-background-size:cover;
-}
-.footer{
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height:40px;
-    background-color:#f5f5f5;
-}
+.font-cima{font-family:DeVinneOrn;font-size:50px;}
+.fondo-azul{background-image:url(../../vista/img/fondo_cabecera.png);background-repeat:repeat-x;color:#ffffff;}
+.footer{position:absolute;bottom:0;width:100%;height:40px;background-color:#f5f5f5;}

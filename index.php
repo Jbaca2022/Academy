@@ -15,6 +15,7 @@ session_start();
         <link href="vista/css/bootstrap-submenu.min.css" rel="stylesheet">
         <link href="vista/css/fuentes.css" rel="stylesheet">
         <link href="vista/css/index.css" rel="stylesheet">
+        <link href="vista/css/navbar_index.css" rel="stylesheet">
         <link href="vista/css/auth.css" rel="stylesheet">
         <link href="vista/css/jquery-confirm.css" rel="stylesheet" type="text/css" />
         
@@ -54,7 +55,7 @@ session_start();
                                     <label for="txtpassword" class="form-label">Contraseña</label>
                                     <input value="" id="txtpassword" type="password" class="form-control" placeholder="Ingresa contraseña"/>
                                 </div>
-                                <p id="errorLog"> Contraseña o usuario incorrecto</p>
+                                <p id="errorLog">Usuario y/o contraseña incorrectos</p>
                                 <button class="btn btn-primary btn-block" id="btnlogeo">INGRESAR</button>
                             </section>
                         </div>
