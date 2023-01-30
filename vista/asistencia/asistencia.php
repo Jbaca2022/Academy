@@ -27,6 +27,7 @@
         <script type="text/javascript" src="../js/script_index2.0.js"></script>
 
         <!--PROPIOS-->
+        <link href="../css/asistencia2.0.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="../js/script_asistencia.js"></script>
         <!--PROPIOS-->
         <title></title>
@@ -44,29 +45,24 @@
                 <div class="col-xs-5 col-md-5" id="conectividad">
                 </div>
                 <div class="col-xs-3 col-md-3 bg-primary">
-                    <h3 class="text-center reloj" id="reloj">CI:MA:CI MA</h3>
+                    <h3 class="text-center reloj" id="reloj">HH:MM:SS AM</h3>
                 </div>
             </div>
             <div class="row row-cuerpo">
                 <div class="col-xs-12 col-md-9">
                     <div class="row">
-                        <div class="col-xs-2 col-md-2">
+                        <div class="col-xs-2 col-md-3">
                             <select  class="form-control" id="selAsistencia" >
                                 <option value="2">APELLIDO</option>
                                 <option value="1">CÓDIGO</option>
                             </select>
                         </div>
-                        <div class="col-xs-6 col-md-8">
+                        <div class="col-xs-6 col-md-9">
                             <div class="input-group">
                                 <input type="text" min="0" class="form-control" id="txtAsitencia" data-idalumno="0" data-idanterior="0" disabled/>
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-floppy-disk" id="btn-registrar"></span>
                                 </span>
-                            </div>
-                        </div>
-                        <div class="col-xs-2 col-md-2">
-                            <div class="btn btn-primary btn-block" id="btnactualizar">
-                                ACTUALIZAR
                             </div>
                         </div>
                     </div>
@@ -80,6 +76,7 @@
                                         <th>Apellido y Nombres</th>
                                         <th width="20%">Descripción</th>
                                         <th>Asistencia</th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody id="tbody-asistencia">
@@ -90,42 +87,18 @@
                 </div>
                 <div class="col-xs-12 col-md-3">
                     <div class="thumbnail">
-                        <img class="foto" src="img/foto.png" id="fotopersona" style="background-image: url(0.jpg);"></img>
+                        <img class="foto" src="../img/0.jpg" id="fotopersona" ></img>
                         <div class="caption text-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading text-center" id="detalle-persona">
                                     NOMBRE DE LA PERSONA
                                 </div>
-                                <table class="table">
-                                    <tr id="familiafoto">                                       
-                                    </tr>
-                                    <tr>
-                                        <td>TARDANZAS</td>
-                                        <th id="detalle-tardanza">5</th>
-                                    </tr>
-                                    <tr>
-                                        <td>FALTAS</td>
-                                        <th id="detalle-falta">5</th>
-                                    </tr>
-                                    <tr>
-                                        <td>SIN CARNÉT  </td>
-                                        <th id="detalle-sincarnet">5</th>
-                                    </tr>
-                                    <tr>
-                                        <th colspan="2" class="text-center bg-primary" id="detalle-deuda">000.00</th>
-                                    </tr>
-                                    <tr>
-                                        <td>VENCIMIENTO</td>
-                                        <th id="detalle-vencimiento">00/00/0000</th>
-                                    </tr>
-                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <!--        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".vent-asistencia">Detalle asistencia</button>-->
         <div class="modal fade vent-asistencia">
             <div class="modal-dialog">
@@ -140,7 +113,6 @@
                                 <tr>
                                     <th>FECHA</th>
                                     <th>HORA</th>
-                                    <th>MODALIDAD</th>
                                     <th></th>
                                 </tr>
                             </thead>
