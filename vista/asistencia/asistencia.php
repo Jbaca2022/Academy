@@ -36,7 +36,7 @@
     <body class="full">
         <!-- Navigation -->
         <?php  include '../navbar.html' ?>
-         <div id="datosusuario" data-idusuario=""> <?= $_SESSION['id'] ?></div>
+         <div id="datosusuario" data-idusuario="<?= $_SESSION['id'] ?>"> </div>
         <!-- Navigation -->
         <div class="col-md-offset-1 col-md-10 cuerpo">
             <div class="row row-cuerpo">
