@@ -36,7 +36,7 @@
     <body class="full">
         <!-- Navigation -->
         <?php  include '../navbar.html' ?>
-         <div id="datosusuario" data-idusuario=""> <?= $_SESSION['id'] ?></div>
+         <div id="datosusuario" data-idusuario="<?= $_SESSION['id'] ?>"> </div>
         <!-- Navigation -->
         <div class="col-md-offset-1 col-md-10 cuerpo">
             <div class="row row-cuerpo">
@@ -54,8 +54,8 @@
                     <div class="row">
                         <div class="col-xs-2 col-md-3">
                             <select  class="form-control" id="selAsistencia" >
-                                <option value="2">APELLIDO</option>
                                 <option value="1">CÓDIGO</option>
+                                <option value="2">APELLIDO</option>
                             </select>
                         </div>
                         <div class="col-xs-6 col-md-9">

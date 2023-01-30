@@ -82,17 +82,24 @@ $(document).ready(function () {
     }
     function registrar_asistencia() {
         if ($("#selAsistencia option:selected").val() == 1) {
-        id = Number($("#txtAsitencia").val());
+            id = Number($("#txtAsitencia").val());
+            $.post('../../controlador/load_asistencia.php', {
+                caso: 5,
+                id: id
+            }, function (data) {
+                actualizarFila(id);
+            }, 'json');
         }
         if ($("#selAsistencia option:selected").val() == 2) {
-        id = $("#txtAsitencia").data("idalumno");
+            id = $("#txtAsitencia").data("idalumno");
+            $.post('../../controlador/load_asistencia.php', {
+                caso: 2,
+                id: id
+            }, function (data) {
+                actualizarFila(id);
+            }, 'json');
         }
-        $.post('../../controlador/load_asistencia.php', {
-            caso: 2,
-            id: id
-        }, function (data) {
-            actualizarFila(id);
-        }, 'json');
+
     }
 
     $("#btn-registrar").on("click", function () {
@@ -104,6 +111,8 @@ $(document).ready(function () {
         $("#conectividad").html('<h3 class="text-primary"><b>EN LÍNEA</b></h3>');
         //Actualizar la data asistencias
         $("#td-asistencia" + data.idalumno).html(data.asistencia);
+        $("#txtAsitencia").val("");
+        
         //Actualizar la data maxhora
         $("#" + data.idalumno).data("maxhora", data.maxhora);
     }
