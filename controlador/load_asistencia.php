@@ -43,6 +43,14 @@ switch ($caso) {
             $Json[] = $row;
         }
         echo json_encode($Json);
-        break;        
+        break;    
+    case 5:
+        $id = $_POST['id'];
+        $fila = $obj->registrarasistencia_dni($id);
+        while ($row = pg_fetch_assoc($fila)) {
+            $Json[] = $row;
+        }
+        echo json_encode($Json);
+        break;            
     }
     ?>

@@ -36,7 +36,11 @@ class clssql_asistencia {
 		return $rsql;		
 	}	
 	
-
+	function registrarasistencia_dni($id){
+		$sql=" select * from fn_asistencia_insertar_dni('$id')";
+		$rsql = $this->select($sql);
+		return $rsql;		
+	}
 	
 }
 ?>
