@@ -15,6 +15,8 @@
         } else {
             $(".frmlogeo").css({ display: "none" });
             $("#frm-cerrar").css({ display: "block" });
+            $('.full').css('margin-top','55px')
+            $('.navbar').css('display', 'inline');
         }
     }  
     function permiso() {
@@ -69,60 +71,52 @@
             // return false;
         }
     }
-    // $("#pactualizar").click(function() {
-    //     $.post(
-    //         "/v4cima/controlador/load_logeo.php", {
-    //             caso: 5
-    //         },
-    //         function(data) {
-    //             logeo(data, 2);
-    //         },
-    //         "json"
-    //     );
-    // });
-    // $("#cerrar").click(function() {
-    //     $.confirm({
-    //         title: "¡Confirmar!",
-    //         content: "¿Esta seguro de cerrar sesión?",
-    //         animation: "zoom",
-    //         confirmButton: '<button class="btn btn-primary" style="color: rgba(255,255,255,0.9);">SI</button>',
-    //         cancelButton: '<button class="btn btn-danger" style="color: rgba(255,255,255,0.9);">NO</button>',       
-    //         closeAnimation: "zoom",
-    //         keyboardEnabled: true,
-    //         //            buttons: {
-    //         confirm: function() {
-    //                 $.get("/v4cima/controlador/load_logeo.php?caso=3", function() {
-    //                     $("#bloqueo").css("display", "none");
-    //                     $("#modulo").data("colegio", 0);
-    //                     $("#modulo").data("academia", 0);
-    //                     $("#modulo").data("admision", 0);
-    //                     $("#modulo").data("contabilidad", 0);
-    //                     $("#modulo").data("asistencia", 0);
-    //                     $("#modulo").data("mantenimiento", 0);
-    //                     $("#modulo").data("osimrep", 0);
-    //                     $("#modulo").data("idusuario", "");
-    //                     modulo();
-    //                     $("#modulo").data("osimrep", "");
-    //                     window.location.href = "/v4cima/index.php";
-    //                 });
-    //                 //return true;
-    //             }
-    //             //                ,
-    //             //                cancel: function () {
-    //             //                }
-    //     });
-    // });
-    // setInterval(function() {
-    //     $.getJSON("/v4cima/vista/inactividad.php", function(data) {
-    //         if (!data[0].cima) {
-    //             if (
-    //                 $("#nusuario")
-    //                 .html()
-    //                 .replace("\n", "") !== ""
-    //             ) {
-    //                 location.reload();
-    //             }
-    //         }
-    //     });
-    // }, 60000);
+    $("#cerrar").click(function () {
+        $.confirm({
+            title: "Confirmar!",
+            content: "Esta seguro de cerrar sesión?",
+            animation: "zoom",
+            closeAnimation: "zoom",
+            keyboardEnabled: true,
+            //            buttons: {
+            confirm: function () {
+                $.get("/Academy/controlador/load_logueo.php?caso=3", function () {
+                    $("#bloqueo").css("display", "none");
+                    $("#modulo").data("nombre", "");
+                    $("#modulo").data("apellido", "");
+                    $("#modulo").data("rol", "");
+                    $("#modulo").data("idusuario", "");
+                    modulo();
+                    window.location.href = "/Academy/index.php";
+                });
+            }
+        });
+    });
+    setInterval(function () {
+        $.getJSON("/Academy/vista/inactividad.php", function (data) {
+            if (!data[0].cima) {
+                if (
+                    $("#nusuario")
+                        .html()
+                        .replace("\n", "") !== ""
+                ) {
+                    location.reload();
+                }
+            }
+        });
+    }, 60000);
+    $('.dropdown-toggle').click(function () {
+        var idusuario = $("#modulo").data("id");
+        if (idusuario === 0) {
+            $.get("/Academy/controlador/load_logeo.php?caso=3", function () {
+                $("#bloqueo").css("display", "none");
+                $("#modulo").data("nombre", "");
+                $("#modulo").data("apellido", "");
+                $("#modulo").data("rol", "");
+                $("#modulo").data("idusuario", "");
+                modulo();
+                window.location.href = "/Academy/index.php";
+            });
+        }
+    })
 });

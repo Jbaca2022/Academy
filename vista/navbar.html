@@ -8,5 +8,36 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="#"><span class="font-e">EXCELENCIA</span></a>
         </div>
+        <div class="collapse navbar-collapse" id="nav-bar-index">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-submenu id="frmAsistencia">ASIST.<span
+                        class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a tabindex="0" href="/Academy/vista/asistencia/asistencia.php"><span
+                                class="glyphicon glyphicon-chevron-right"></span>
+                              FICHA</a>
+                          </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" id="frm-cerrar">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                      <?php $img = !isset($_SESSION['idv4cima'])?'/v4cima/vista/0':'/v4cima/vista/fotos/prf'.$_SESSION['idv4cima']; ?>
+                      <img src="<?=$img ?>.jpg" class="img-circle" width="18px" id="img-usuario">
+                      <span class="glyphicon glyphicon-chevron-down"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li id="cerrar">
+                        <a tabindex="0" style="cursor: pointer">
+                          <span class="glyphicon glyphicon-off"></span> CERRAR SESIÓN
+                        </a>
+                      </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>

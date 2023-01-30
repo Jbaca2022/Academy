@@ -25,5 +25,9 @@ switch ($caso) {
         }
         echo json_encode($Json);
         break;
+        case 3:
+            session_start();
+            session_destroy();
+        break;        
     }
 ?>
