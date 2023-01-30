@@ -1,6 +1,9 @@
-<span id="modulo" class="noprint" data-id="" data-nombre="" data-apellido="" data-rol="">
+<span id="modulo" class="noprint" data-idusuario="<?php if(isset($_SESSION['idv4cima']))echo $_SESSION['idv4cima'];?>" data-colegio="<?php if(isset($_SESSION['colegio']))echo $_SESSION['colegio'];?>" data-academia="<?php if(isset($_SESSION['academia']))echo $_SESSION['academia'];?>"
+    data-admision="<?php if(isset($_SESSION['admision']))echo $_SESSION['admision'];?>" data-contabilidad="<?php if(isset($_SESSION['contabilidad']))echo $_SESSION['contabilidad'];?>" data-asistencia="<?php if(isset($_SESSION['asistencia']))echo $_SESSION['asistencia'];?>"
+    data-mantenimiento="<?php if(isset($_SESSION['mantenimiento']))echo $_SESSION['mantenimiento'];?>" data-sistemanota="<?php if(isset($_SESSION['sistemanota']))echo $_SESSION['sistemanota'];?>" data-osimrep="<?php if(isset($_SESSION['v4permiso']))echo $_SESSION['v4permiso'];?>"
+    data-ip="<?php if(isset($_SESSION['ip']))echo $_SESSION['ip'];?>" data-mac_string="">
 </span>
-<nav class="navbar navbar-inverse navbar-fixed-top fondo-azul noprint" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top fondo-azul noprint" role="navigation" style="display:none;">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -10,12 +13,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-            <a class="navbar-brand" href="#"><span class="font-cima">Academy</span></a>
+            <a class="navbar-brand" href="#"><span class="font-cima">EXCELENCIA</span></a>
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="nav-bar-index">
-        </div>
-        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container -->
 </nav>
