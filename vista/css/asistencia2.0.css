@@ -1,23 +1,30 @@
 .cuerpo{
     min-height:530px;
     height:100%;
+    max-height:85vh;
     background-color:#ECECEC;
     font-family: Aller;
     /*border-radius:15px;*/
     z-index:1;
-    border-bottom:2px solid #004899;
+    border-bottom:2px solid #394552;
 }
 .tbl-asistencia{
     /*margin-top: -82px;*/
-    font-size: 12px;
+    font-size: 14px;
 }
 #tbl-asistencia_filter,#tbl-asistencia_length{
     display: none;
 }
 .cabecera {
-    background: #004899;
+    background: #D36E4B;
     color: #FFFFFF;
 }
+
+.cabecera th{
+    text-align: center;
+    padding: 8px;
+}
+
 .text-12{
     font-size: 12px;
 }
@@ -45,4 +52,22 @@
     /*background-color: rgb(26, 128, 239);*/
     color: rgb(26, 128, 239);
     font-weight: bold;
+}
+
+#fotopersona{
+    margin-top: 5px;
+    height: 250px;
+    border-radius: 8%;
+}
+
+h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.panel{
+    margin-bottom: 0;
+}
+
+.bg-dark{
+    color: #ECECEC;
+    background: rgb(41, 41, 41);
 }

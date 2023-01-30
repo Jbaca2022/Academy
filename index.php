@@ -38,7 +38,7 @@ session_start();
                     <section class="card-body">
                         <div action="" class="sh-form form-group">
                             <section class="auth_thumb sh-mb-3">
-                                <img src="vista/img/nasa.png"
+                                <img src="vista/img/Excelencia.png"
                                 alt="logo" class="img-fluid">
                             </section>
                             <h2 class="auth_title sh-mb-3">
@@ -56,7 +56,7 @@ session_start();
                                     <input value="" id="txtpassword" type="password" class="form-control" placeholder="Ingresa contraseña"/>
                                 </div>
                                 <p id="errorLog">Usuario y/o contraseña incorrectos</p>
-                                <button class="btn btn-primary btn-block" id="btnlogeo">INGRESAR</button>
+                                <button class="btn btn-danger btn-block" id="btnlogeo">INGRESAR</button>
                             </section>
                         </div>
                     </section>

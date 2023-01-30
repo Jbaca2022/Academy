@@ -46,6 +46,9 @@
                         console.log(data[0]._id);
                         console.log('---');
 
+                        $('.navbar').css('display', 'inline');
+                        $('.full').css('margin-top','55px')
+
                         $('#modulo').data('id', data[0]._id);
                         $('#modulo').data('nombre', data[0]._nombre);
                         $('#modulo').data('apellido', data[0]._apellido);

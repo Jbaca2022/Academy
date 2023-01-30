@@ -45,7 +45,7 @@
                 </div>
                 <div class="col-xs-5 col-md-5" id="conectividad">
                 </div>
-                <div class="col-xs-3 col-md-3 bg-primary">
+                <div class="col-xs-3 col-md-3 bg-dark">
                     <h3 class="text-center reloj" id="reloj">HH:MM:SS AM</h3>
                 </div>
             </div>
@@ -88,11 +88,11 @@
                 </div>
                 <div class="col-xs-12 col-md-3">
                     <div class="thumbnail">
-                        <img class="foto" src="../img/0.jpg" id="fotopersona" ></img>
+                        <img class="foto" src="../img/sinfoto.jpg" id="fotopersona" ></img>
                         <div class="caption text-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading text-center" id="detalle-persona">
-                                    NOMBRE DE LA PERSONA
+                                    SELECCIONE UN USUARIO
                                 </div>
                             </div>
                         </div>

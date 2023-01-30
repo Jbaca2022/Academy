@@ -45,7 +45,7 @@ body{
 .auth_thumb{
     display: flex;
     justify-content: center;
-    height: 85px;
+    height: 60px;
     margin-top: 15vh;
     margin-bottom: 2.5rem;
 }
@@ -78,13 +78,14 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 27px;
     font-size: 1.7rem;
+    background: #D36E4B;
 }
 
 #errorLog{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.7rem;
     margin-top: 1.5rem;
-    color: red;
+    color: rgb(195, 46, 46);
     text-align: center;
     display: none;
 }
