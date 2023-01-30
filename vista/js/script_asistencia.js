@@ -9,11 +9,11 @@ $(document).ready(function () {
             if (data != null) {
                 var html = '';
                 for (var i = 0; i < data.length; i++) {
-                    html += '<tr class="tr-persona" id="'+ data[i]._id+'" data-nombre="'+ data[i]._nombre + " " + data[i]._apellido +'" data-id="'+  data[i]._id +'"> '
-                    html += '   <td class="text-center">' + data[i]._documento + "</td>";
-                    html += '   <td class="text-center">' + data[i]._nombre + " " + data[i]._apellido  + "</td>";
-                    html += '   <td class="text-center">' + data[i]._rol + "</td>";
-                    html += '   <td class="text-center">' + data[i]._asistencia + "</td>";
+                    html += '<tr class="tr-persona" id="'+ data[i]._documento+'" data-nombre="'+ data[i]._nombre + " " + data[i]._apellido +'" data-id="'+  data[i]._documento +'"> '
+                    html += '<td class="text-center">' + data[i]._documento + "</td>";
+                    html += '<td class="text-center">' + data[i]._nombre + " " + data[i]._apellido  + "</td>";
+                    html += '<td class="text-center">' + data[i]._rol + "</td>";
+                    html += '<td class="text-center" id="cantidad'+ data[i]._documento +'">' + data[i]._asistencia + "</td>";
                     html +=
                     '   <td><span  data-id="' +
                     data[i]._id +
@@ -39,19 +39,11 @@ $(document).ready(function () {
         const now = new Date().toLocaleDateString('en-US');
     }, 1000);
 
-    $(document).keydown(function () {
-        //Cada que se presiona la tecla el foco lo pone en el input para colocar el código
-        //Siempre y cuando no esté abierto el modal para ver las asistencias offline
-        if ($(".vent-offline").css("display") === "none") {
-        $("#txtAsitencia").focus();
-        }
-    }); 
-    
     $("#selAsistencia").change(function () {
         if ($("#selAsistencia option:selected").val() == 1) {
-        $("#txtAsitencia").attr("type", "number");
+            $("#txtAsitencia").attr("type", "number");
         } else {
-        $("#txtAsitencia").attr("type", "text");
+            $("#txtAsitencia").attr("type", "text");
         }
     });
 
@@ -77,44 +69,45 @@ $(document).ready(function () {
             $(element).addClass("resaltar");
             $(element_a).removeClass("resaltar");
             idanterior = $("#txtAsitencia").data("idanterior", idcliente);
-            //preparar_asistencia(idcliente);
+            preparar_asistencia(idcliente);
         }
     }
+    function preparar_asistencia(id) {
+        if ($("#selAsistencia option:selected").val() == 1) {
+          $("#txtAsitencia").val(id);
+          $("#txtAsitencia").focus();
+        }
+      }
     function registrar_asistencia() {
         if ($("#selAsistencia option:selected").val() == 1) {
             id = Number($("#txtAsitencia").val());
-            $.post('../../controlador/load_asistencia.php', {
-                caso: 5,
-                id: id
-            }, function (data) {
-                actualizarFila(id);
-            }, 'json');
+
         }
         if ($("#selAsistencia option:selected").val() == 2) {
             id = $("#txtAsitencia").data("idalumno");
-            $.post('../../controlador/load_asistencia.php', {
-                caso: 2,
-                id: id
-            }, function (data) {
-                actualizarFila(id);
-            }, 'json');
         }
-
+        $.post('../../controlador/load_asistencia.php', {
+            caso: 5,
+            id: id
+        }, function (data) {
+            actualizarFila(id);
+        }, 'json');
     }
 
     $("#btn-registrar").on("click", function () {
         registrar_asistencia();
     });
 
-    function actualizarFila(data) {
+    function actualizarFila(id) {
         //Se conecto 
         $("#conectividad").html('<h3 class="text-primary"><b>EN LÍNEA</b></h3>');
         //Actualizar la data asistencias
-        $("#td-asistencia" + data.idalumno).html(data.asistencia);
+        //$("#td-asistencia" + data.idalumno).html(data.asistencia);
         $("#txtAsitencia").val("");
         
         //Actualizar la data maxhora
-        $("#" + data.idalumno).data("maxhora", data.maxhora);
+        let valor = $("#" + id + ' #cantidad'+ id).html();
+        $("#" + id + ' #cantidad'+ id).html(parseInt(valor) + 1);
     }
     $("#txtAsitencia").on("keyup click", function (tecla) {
         var id = 0;

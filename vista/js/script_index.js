@@ -17,8 +17,8 @@
             $(".frmlogeo").css({ display: "none" });
             $("#frm-cerrar").css({ display: "block" });
             $('.navbar').css({display: 'inline'});
-            $('.full').css('padding-top','7vh')    
             $('.full').css('height','93vh')    
+            $('.full').css('padding-top','7vh')    
         }
     }  
     function permiso() {
