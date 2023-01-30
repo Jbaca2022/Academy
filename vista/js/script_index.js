@@ -1,4 +1,24 @@
 ﻿$(document).ready(function() {
+    var permisomododulo;
+    permiso();
+    modulo();
+    $(".frmlogeo").css({ display: "block" });
+
+    function modulo() {
+        var idusuario = $("#modulo").data("id");
+        console.log($("#modulo").data("id"));
+        console.log('+++');
+
+        if (idusuario === "") {
+            $(".frmlogeo").css({ display: "block" });
+            $("#frm-cerrar").css({ display: "none" });
+        } else {
+            $(".frmlogeo").css({ display: "none" });
+            $("#frm-cerrar").css({ display: "block" });
+        }
+    }  
+    function permiso() {
+    }
 
     $("#txtusuario,#txtpassword").keypress(function(e) {
         if (e.which == 13) {
@@ -23,11 +43,18 @@
                     console.log(data[0]._estado);
                     if (data[0]._estado == 't') {
                         $("#bloqueo").css('display', 'none');
+                        console.log(data[0]._id);
+                        console.log('---');
+
                         $('#modulo').data('id', data[0]._id);
                         $('#modulo').data('nombre', data[0]._nombre);
                         $('#modulo').data('apellido', data[0]._apellido);
                         $('#modulo').data('rol', data[0]._rol);
-                        $(location).attr('href','vista/menu.php');
+                        //$(location).attr('href','vista/menu.php');
+                        modulo();
+                        permiso();
+                        $(".frmlogeo").css({ display: "none" });
+
                     } else {
                         $('#errorLog').css('display','block')
                     }
