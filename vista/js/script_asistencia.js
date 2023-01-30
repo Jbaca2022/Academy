@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     cargar_asistencia();
+    console.log($('#modulo').data('id'));
     function cargar_asistencia() {
         $.post('../../controlador/load_asistencia.php', {
             caso: 1

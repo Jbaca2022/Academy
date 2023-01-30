@@ -3,7 +3,6 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="es" class="full">
-<html lang="es" class="full">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,7 +30,7 @@ session_start();
 
         <?php include 'vista/navbar.html' ?>
 
-        <div class="row">
+        <div class="row frmlogeo">
             <section class="col-md-6" id="image-login">
             </section>
             <section class="col-md-6" id="auth-content">

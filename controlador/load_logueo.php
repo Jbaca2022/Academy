@@ -17,6 +17,11 @@ switch ($caso) {
         $fila = $obj->listarLogueo($user, $pass);
         while ($row = pg_fetch_assoc($fila)) {
             $Json[] = $row;
+            session_start();
+            $_SESSION['id'] = $row['_id'];
+            $_SESSION['nombre'] = $row['_nombre'];
+            $_SESSION['apellido'] = $row['_apellido'];
+            $_SESSION['rol'] = $row['_rol'];
         }
         echo json_encode($Json);
         break;

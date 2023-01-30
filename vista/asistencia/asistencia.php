@@ -1,5 +1,6 @@
 <?php
-
+    session_start();
+    //acceso($_SESSION['v4permiso'], $acceso);
 ?>
 <html>
     <head>
@@ -24,7 +25,7 @@
         <script type="text/javascript" src="../js/moment.min.js"></script>
         <script type="text/javascript" src="../js/bootstrap-datetimepicker.js"></script>
         <script type="text/javascript" src="../js/bootstrap-select.min.js"></script>
-        <script type="text/javascript" src="../js/script_index2.0.js"></script>
+        <script type="text/javascript" src="../js/script_index.js"></script>
 
         <!--PROPIOS-->
         <link href="../css/asistencia2.0.css" rel="stylesheet" type="text/css" />
@@ -34,8 +35,8 @@
     </head>
     <body class="full">
         <!-- Navigation -->
-        <?php /* include '../navbar.html' */ ?>
-        <!--         <div id="datosusuario" data-idusuario="<?= $_SESSION['idv4cima'] ?>" data-login="<?= $_SESSION['u_login'] ?>" data-osimrep="<?= $_SESSION['v4permiso'] ?>"></div> -->
+        <?php  include '../navbar.html' ?>
+         <div id="datosusuario" data-idusuario=""> <?= $_SESSION['id'] ?></div>
         <!-- Navigation -->
         <div class="col-md-offset-1 col-md-10 cuerpo">
             <div class="row row-cuerpo">
