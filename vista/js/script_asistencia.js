@@ -98,7 +98,7 @@ $(document).ready(function () {
         registrar_asistencia();
     });
 
-    function actualizarFila(idalumno) {
+    function actualizarFila(id) {
         //Se conecto 
         $("#conectividad").html('<h3 class="text-primary"><b>EN LÍNEA</b></h3>');
         //Actualizar la data asistencias
