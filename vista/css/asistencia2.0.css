@@ -1,0 +1,48 @@
+.cuerpo{
+    min-height:530px;
+    height:100%;
+    background-color:#ECECEC;
+    font-family: Aller;
+    /*border-radius:15px;*/
+    z-index:1;
+    border-bottom:2px solid #004899;
+}
+.tbl-asistencia{
+    /*margin-top: -82px;*/
+    font-size: 12px;
+}
+#tbl-asistencia_filter,#tbl-asistencia_length{
+    display: none;
+}
+.cabecera {
+    background: #004899;
+    color: #FFFFFF;
+}
+.text-12{
+    font-size: 12px;
+}
+.reloj{   
+    font-family: 'LetraDigital';
+    font-size: 40px;
+    margin: 10px;
+}
+
+.cronometro{   
+    font-family: 'LetraDigital';
+    font-size: 27px;
+    
+    
+}
+.foto{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.tr-persona,#btn-registrar,#btn-offline{
+    cursor: pointer;
+}
+.resaltar{
+    /*background-color: rgb(26, 128, 239);*/
+    color: rgb(26, 128, 239);
+    font-weight: bold;
+}
