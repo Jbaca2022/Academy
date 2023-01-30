@@ -10,6 +10,17 @@ body{
     color: #3C3C3C;
 }
 
+.welcome{
+    display: none;
+    width: 100vw;
+    height: 93vh;
+    background-image: url('../img/fondo.jpg');
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    background-size:cover;
+    -o-background-size:cover;
+}
+
 .row{
     width: 100vw;
     margin: 0;

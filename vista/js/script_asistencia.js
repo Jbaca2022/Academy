@@ -10,10 +10,10 @@ $(document).ready(function () {
                 var html = '';
                 for (var i = 0; i < data.length; i++) {
                     html += '<tr class="tr-persona" id="'+ data[i]._id+'" data-nombre="'+ data[i]._nombre + " " + data[i]._apellido +'" data-id="'+  data[i]._id +'"> '
-                    html += "   <td>" + data[i]._documento + "</td>";
-                    html += "   <td>" + data[i]._nombre + " " + data[i]._apellido  + "</td>";
-                    html += "   <td>" + data[i]._rol + "</td>";
-                    html += "   <td>" + data[i]._asistencia + "</td>";
+                    html += '   <td class="text-center">' + data[i]._documento + "</td>";
+                    html += '   <td class="text-center">' + data[i]._nombre + " " + data[i]._apellido  + "</td>";
+                    html += '   <td class="text-center">' + data[i]._rol + "</td>";
+                    html += '   <td class="text-center">' + data[i]._asistencia + "</td>";
                     html +=
                     '   <td><span  data-id="' +
                     data[i]._id +

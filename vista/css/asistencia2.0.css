@@ -1,17 +1,17 @@
 .cuerpo{
+    margin-top: 23px;
     min-height:530px;
     height:100%;
     max-height:85vh;
     background-color:#ECECEC;
     font-family: Aller;
-    /*border-radius:15px;*/
     z-index:1;
     border-bottom:2px solid #394552;
 }
 .tbl-asistencia{
     /*margin-top: -82px;*/
     font-size: 14px;
-}
+}   
 #tbl-asistencia_filter,#tbl-asistencia_length{
     display: none;
 }

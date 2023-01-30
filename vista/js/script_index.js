@@ -2,7 +2,6 @@
     var permisomododulo;
     permiso();
     modulo();
-    $(".frmlogeo").css({ display: "block" });
 
     function modulo() {
         var idusuario = $("#modulo").data("id");
@@ -11,12 +10,15 @@
 
         if (idusuario === "") {
             $(".frmlogeo").css({ display: "block" });
+            $(".welcome").css({ display: "none" });
             $("#frm-cerrar").css({ display: "none" });
         } else {
+            $(".welcome").css({ display: "block" });
             $(".frmlogeo").css({ display: "none" });
             $("#frm-cerrar").css({ display: "block" });
-            $('.full').css('margin-top','55px')
-            $('.navbar').css('display', 'inline');
+            $('.navbar').css({display: 'inline'});
+            $('.full').css('padding-top','7vh')    
+            $('.full').css('height','93vh')    
         }
     }  
     function permiso() {
@@ -49,7 +51,7 @@
                         console.log('---');
 
                         $('.navbar').css('display', 'inline');
-                        $('.full').css('margin-top','55px')
+                        $('.full').css('padding-top','55px')    
 
                         $('#modulo').data('id', data[0]._id);
                         $('#modulo').data('nombre', data[0]._nombre);
