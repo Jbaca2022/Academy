@@ -38,8 +38,8 @@
         var password = $("#txtpassword").val();
         if (usuario !== "" && password !== "") {
             $.post(
-                "controlador/load_logueo.php", {
-                    caso: "1",
+                "/Academy/controlador/load_logeo.php", {
+                    caso: 1,
                     user: usuario,
                     pass: password
                 },
@@ -82,7 +82,7 @@
             keyboardEnabled: true,
             //            buttons: {
             confirm: function () {
-                $.get("/Academy/controlador/load_logueo.php?caso=3", function () {
+                $.get("/Academy/controlador/load_logeo.php?caso=3", function () {
                     $("#bloqueo").css("display", "none");
                     $("#modulo").data("nombre", "");
                     $("#modulo").data("apellido", "");

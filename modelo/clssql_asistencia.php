@@ -1,4 +1,4 @@
-<?
+<?php
 include("cnx.php");	
 
 class clssql_asistencia {

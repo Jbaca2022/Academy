@@ -1,7 +1,7 @@
 <?php
 include("cnx.php");	
 
-class clssql_logueo {
+class clssql_logeo {
 
 	function select($sql){
 		$cnx=conectaPgSQL();
@@ -20,4 +20,3 @@ class clssql_logueo {
 		return $rsql;		
 	}
 }
-?>

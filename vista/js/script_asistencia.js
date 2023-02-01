@@ -9,7 +9,7 @@ $(document).ready(function () {
             if (data != null) {
                 var html = '';
                 for (var i = 0; i < data.length; i++) {
-                    html += '<tr class="tr-persona" id="'+ data[i]._documento+'" data-nombre="'+ data[i]._nombre + " " + data[i]._apellido +'" data-id="'+  data[i]._documento +'"> '
+                    html += '<tr class="tr-persona" id="'+ data[i]._documento+'" data-nombre="'+ data[i]._nombre + " " + data[i]._apellido +'" data-foto="'+  data[i]._id +'" data-id="'+  data[i]._documento +'"> '
                     html += '<td class="text-center">' + data[i]._documento + "</td>";
                     html += '<td class="text-center">' + data[i]._nombre + " " + data[i]._apellido  + "</td>";
                     html += '<td class="text-center">' + data[i]._rol + "</td>";
@@ -59,9 +59,20 @@ $(document).ready(function () {
             $("#txtAsitencia").data("idalumno", id);
         }
         $("#txtAsitencia").data("idalumno", id);
-        //cargarDetalles(id);
+        cargarDetalles(id);
         resaltarfila(id, idanterior);
     });
+
+    function cargarDetalles(id) {
+        //\fotospersonal
+        let nombre = $("#" + id).data('nombre');
+        let foto = $("#" + id).data('id');
+        $("#detalle-persona").html(nombre);
+        $("#fotopersona").attr(
+            "style",
+            "background-image: url(../fotopersonal/" + foto + ".jpg);"
+          );
+    }
     function resaltarfila(idcliente, idanterior) {
         if (idcliente != idanterior) {
             var element = "#" + idcliente;
@@ -91,6 +102,7 @@ $(document).ready(function () {
             id: id
         }, function (data) {
             actualizarFila(id);
+            cargarDetalles(id);
         }, 'json');
     }
 
