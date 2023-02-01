@@ -197,44 +197,47 @@ $(document).ready(function () {
                 $("#tbody-detalle-asistencia").html(html);           
             } 
         }, 'json');
-    }
 
-    function ver_detalle_asistencia_v2(element) {
-        console.log(element);
-        $("#tbody-detalle-asistencia").html("");
-        $(".vent-asistencia").modal("show");
-        id = $(element).data("foto");
-        $("#footer-alumno").html($("#" + id).data("nombre"));
-        $.post('../../controlador/load_asistencia.php', {
-            caso: 3, id: id
-        }, function (data) {
+
+
+       /*  $.getJSON(
+            "../controlador/load_asistencia.php?caso=9",
+            {
+            idalumno: id,
+            indicador: $("#" + id).data("indicador"),
+            tipo: $("#" + id).data("tipo")
+            },
+            function (data) {
             if (data != null) {
                 var html;
                 for (i = 0; i < data.length; i++) {
-                html += '<tr id="tr-' + data[i]._id + '">';
-                html += "   <td>" + data[i]._dia + "</td>";
-                html += "   <td>" + data[i]._hora + "</td>";
+                html += '<tr id="tr-' + data[i].id + '">';
+                html += "   <td>" + data[i].fecha + "</td>";
+                html += "   <td>" + data[i].hora + "</td>";
+                html += "   <td>" + data[i].descripcion + "</td>";
                 html +=
                     '   <td id="' +
-                    data[i]._id +
+                    data[i].id +
                     '" data-idalumno="' +
-                    data[i]._persona +
+                    data[i].idcliente +
                     '" class="delete-asistencia">';
                 html +=
                     '       <span class="glyphicon glyphicon-trash close"></span>';
                 html += "   </td>";
                 html += "</tr>";
                 }
-                $("#tbody-detalle-asistencia").html(html);           
-            } 
-        }, 'json');
+                $("#tbody-detalle-asistencia").html(html);
+            }
+            }
+        ); */
     }
+
     $("#tbl-asistencia").on("click", ".span-ver-asistencia", function () {
         ver_detalle_asistencia(this);
     });
 
     $("#tbl-asistencia").on("dblclick", ".tr-persona", function () {
-        ver_detalle_asistencia_v2(this);
+        ver_detalle_asistencia(this);
     });
 
     $(".vent-asistencia").click(function () {

@@ -38,7 +38,7 @@
         var password = $("#txtpassword").val();
         if (usuario !== "" && password !== "") {
             $.post(
-                "controlador/load_logueo.php", {
+                "/Academy/controlador/load_logeo.php", {
                     caso: 1,
                     user: usuario,
                     pass: password
@@ -47,6 +47,9 @@
                     console.log(data[0]._estado);
                     if (data[0]._estado == 't') {
                         $("#bloqueo").css('display', 'none');
+                        console.log(data[0]._id);
+                        console.log('---');
+
                         $('.navbar').css('display', 'inline');
                         $('.full').css('padding-top','55px')    
 
@@ -79,7 +82,7 @@
             keyboardEnabled: true,
             //            buttons: {
             confirm: function () {
-                $.get("/Academy/controlador/load_logueo.php?caso=3", function () {
+                $.get("/Academy/controlador/load_logeo.php?caso=3", function () {
                     $("#bloqueo").css("display", "none");
                     $("#modulo").data("nombre", "");
                     $("#modulo").data("apellido", "");
@@ -97,7 +100,7 @@
                 if (
                     $("#nusuario")
                         .html()
-                         !== ""
+                        .replace("\n", "") !== ""
                 ) {
                     location.reload();
                 }
