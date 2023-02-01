@@ -29,7 +29,7 @@ session_start();
     <body>
 
         <?php include 'vista/navbar.html' ?>
-        <div class="welcome"></div>
+        <div class="welcome" style="display: none;"></div>
         <div class="row frmlogeo">
             <section class="col-md-6" id="image-login">
             </section>
