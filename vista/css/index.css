@@ -31,8 +31,17 @@ body{
     height: 100vh;
 }
 
+#auth-content{
+    background: white;
+}
+
+.frmlogeo{
+    width: 100vw;
+}
+
 #image-login{
     background-image: url('../img/fondo.jpg');
+    background-position: center;
     -webkit-background-size:cover;
     -moz-background-size:cover;
     background-size:cover;
@@ -40,44 +49,42 @@ body{
 }
 
 .card{
-    height: 100vh;
-    padding: 20px 128px;
-}
-
-.sh-form {
-    flex: 1;
+    max-height: fit-content;
+    height: 100%;
+    padding: 4% 18%;
 }
 
 .card-body{
-    display: flex;
-    align-items: center;
+    width: 100%;
+    position: relative;
+    top: 40%;
+    transform: translateY(-40%);
 }
 
 .auth_thumb{
     display: flex;
     justify-content: center;
-    height: 60px;
-    margin-top: 15vh;
-    margin-bottom: 2.5rem;
+    height: 11vw;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .auth_title{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;        
-    margin-bottom: 1.4rem;
+    margin-bottom: 1.8rem;
 }
 .auth_separator{
     width: 100%;
     height: 0.5px;
     background-color: #8E8E8E;
     position: relative;
-    margin-bottom: 20px;
 }
 
 .form-label{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.7rem;
-    margin-top: 10px;
+    margin-top: 2.5rem;
 }
 
 .input-group{
@@ -87,7 +94,7 @@ body{
 
 #btnlogeo{
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 27px;
+    margin-top: 4rem;
     font-size: 1.7rem;
     background: #000C38;
 }
@@ -99,4 +106,48 @@ body{
     color: rgb(195, 46, 46);
     text-align: center;
     display: none;
+}
+
+@media (max-width: 1441px) and (min-width: 991px){
+    .card{
+        padding: 6% 15%;
+    }
+    #image-login{
+        display: none;
+    }
+    #auth-content{
+        width: 60%;
+        align-items: center;
+        left: 20%;
+        right: 20%;
+    }
+    .frmlogeo{
+        background-image: url('../img/fondo.jpg');
+        background-position: center;
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        background-size:cover;
+        -o-background-size:cover;
+        align-items: center;
+    }
+}
+@media (max-width: 991px){
+    #image-login{
+        display: none;
+    }
+    .auth-content{
+        width: 100%;
+    }
+}
+
+@media (max-height: 600px){
+    .card{
+        padding: 2% 15%;
+    }
+}
+
+@media (min-width: 585px){
+    .auth_thumb{
+        height: 60px;
+    }
 }

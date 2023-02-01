@@ -30,10 +30,10 @@ session_start();
 
         <?php include 'vista/navbar.html' ?>
         <div class="welcome" style="display: none;"></div>
-        <div class="row frmlogeo">
+        <div class="row frmlogeo col-12">
             <section class="col-md-6" id="image-login">
             </section>
-            <section class="col-md-6" id="auth-content">
+            <section class="col-md-6 col-xs-12 col-sm-12" id="auth-content">
                 <article class="card">
                     <section class="card-body">
                         <div action="" class="sh-form form-group">
