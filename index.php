@@ -56,7 +56,7 @@ session_start();
                                     <input value="" id="txtpassword" type="password" class="form-control" placeholder="Ingresa contraseña"/>
                                 </div>
                                 <p id="errorLog">Usuario y/o contraseña incorrectos</p>
-                                <button class="btn btn-danger btn-block" id="btnlogeo">INGRESAR</button>
+                                <button class="btn btn-danger btn-block" style="border-color: #000C38 !important;" id="btnlogeo">INGRESAR</button>
                             </section>
                         </div>
                     </section>

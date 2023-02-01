@@ -39,7 +39,7 @@
         if (usuario !== "" && password !== "") {
             $.post(
                 "controlador/load_logueo.php", {
-                    caso: "1",
+                    caso: 1,
                     user: usuario,
                     pass: password
                 },
@@ -47,9 +47,6 @@
                     console.log(data[0]._estado);
                     if (data[0]._estado == 't') {
                         $("#bloqueo").css('display', 'none');
-                        console.log(data[0]._id);
-                        console.log('---');
-
                         $('.navbar').css('display', 'inline');
                         $('.full').css('padding-top','55px')    
 
@@ -100,7 +97,7 @@
                 if (
                     $("#nusuario")
                         .html()
-                        .replace("\n", "") !== ""
+                         !== ""
                 ) {
                     location.reload();
                 }

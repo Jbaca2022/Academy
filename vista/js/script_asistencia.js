@@ -9,7 +9,7 @@ $(document).ready(function () {
             if (data != null) {
                 var html = '';
                 for (var i = 0; i < data.length; i++) {
-                    html += '<tr class="tr-persona" id="'+ data[i]._documento+'" data-nombre="'+ data[i]._nombre + " " + data[i]._apellido +'" data-id="'+  data[i]._documento +'"> '
+                    html += '<tr class="tr-persona" id="'+ data[i]._documento+'" data-nombre="'+ data[i]._nombre + " " + data[i]._apellido +'" data-foto="'+  data[i]._id +'" data-id="'+  data[i]._documento +'"> '
                     html += '<td class="text-center">' + data[i]._documento + "</td>";
                     html += '<td class="text-center">' + data[i]._nombre + " " + data[i]._apellido  + "</td>";
                     html += '<td class="text-center">' + data[i]._rol + "</td>";
@@ -59,9 +59,20 @@ $(document).ready(function () {
             $("#txtAsitencia").data("idalumno", id);
         }
         $("#txtAsitencia").data("idalumno", id);
-        //cargarDetalles(id);
+        cargarDetalles(id);
         resaltarfila(id, idanterior);
     });
+
+    function cargarDetalles(id) {
+        //\fotospersonal
+        let nombre = $("#" + id).data('nombre');
+        let foto = $("#" + id).data('id');
+        $("#detalle-persona").html(nombre);
+        $("#fotopersona").attr(
+            "style",
+            "background-image: url(../fotopersonal/" + foto + ".jpg);"
+          );
+    }
     function resaltarfila(idcliente, idanterior) {
         if (idcliente != idanterior) {
             var element = "#" + idcliente;
@@ -91,6 +102,7 @@ $(document).ready(function () {
             id: id
         }, function (data) {
             actualizarFila(id);
+            cargarDetalles(id);
         }, 'json');
     }
 
@@ -185,47 +197,44 @@ $(document).ready(function () {
                 $("#tbody-detalle-asistencia").html(html);           
             } 
         }, 'json');
+    }
 
-
-
-       /*  $.getJSON(
-            "../controlador/load_asistencia.php?caso=9",
-            {
-            idalumno: id,
-            indicador: $("#" + id).data("indicador"),
-            tipo: $("#" + id).data("tipo")
-            },
-            function (data) {
+    function ver_detalle_asistencia_v2(element) {
+        console.log(element);
+        $("#tbody-detalle-asistencia").html("");
+        $(".vent-asistencia").modal("show");
+        id = $(element).data("foto");
+        $("#footer-alumno").html($("#" + id).data("nombre"));
+        $.post('../../controlador/load_asistencia.php', {
+            caso: 3, id: id
+        }, function (data) {
             if (data != null) {
                 var html;
                 for (i = 0; i < data.length; i++) {
-                html += '<tr id="tr-' + data[i].id + '">';
-                html += "   <td>" + data[i].fecha + "</td>";
-                html += "   <td>" + data[i].hora + "</td>";
-                html += "   <td>" + data[i].descripcion + "</td>";
+                html += '<tr id="tr-' + data[i]._id + '">';
+                html += "   <td>" + data[i]._dia + "</td>";
+                html += "   <td>" + data[i]._hora + "</td>";
                 html +=
                     '   <td id="' +
-                    data[i].id +
+                    data[i]._id +
                     '" data-idalumno="' +
-                    data[i].idcliente +
+                    data[i]._persona +
                     '" class="delete-asistencia">';
                 html +=
                     '       <span class="glyphicon glyphicon-trash close"></span>';
                 html += "   </td>";
                 html += "</tr>";
                 }
-                $("#tbody-detalle-asistencia").html(html);
-            }
-            }
-        ); */
+                $("#tbody-detalle-asistencia").html(html);           
+            } 
+        }, 'json');
     }
-
     $("#tbl-asistencia").on("click", ".span-ver-asistencia", function () {
         ver_detalle_asistencia(this);
     });
 
     $("#tbl-asistencia").on("dblclick", ".tr-persona", function () {
-        ver_detalle_asistencia(this);
+        ver_detalle_asistencia_v2(this);
     });
 
     $(".vent-asistencia").click(function () {

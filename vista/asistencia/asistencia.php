@@ -88,7 +88,7 @@
                 </div>
                 <div class="col-xs-12 col-md-3">
                     <div class="thumbnail">
-                        <img class="foto" src="../img/sinfoto.jpg" id="fotopersona" ></img>
+                    <img class="foto" src="../img/foto.png" id="fotopersona" style="background-image: url(0.jpg);"></img>
                         <div class="caption text-12">
                             <div class="panel panel-default">
                                 <div class="panel-heading text-center" id="detalle-persona">
