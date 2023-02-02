@@ -38,7 +38,7 @@
         <?php  include '../sidebar.html'  ?>
          <div id="datosusuario" data-idusuario="<?= $_SESSION['id'] ?>"> </div>
         <!-- Navigation -->
-        <div class="col-md-offset-1 col-md-10 cuerpo">
+        <div class="col-md-offset-1 col-md-10 cuerpo page-content">
             <div class="row row-cuerpo">
                 <div class="col-xs-4 col-md-4">
                     <h3>REGISTRO DE ASISTENCIA</h3>

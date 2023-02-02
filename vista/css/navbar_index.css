@@ -322,6 +322,37 @@
 }
 
 #frm-cerrar{
-    position: absolute;
-    right: 0;
+    position: fixed;
+    top: 0x;
+    right: 24px;
+}
+
+.user-button{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  width: 9rem;
+}
+
+.page-content{
+  position: absolute;
+  top: 70px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  height: 100vh;
+}
+
+.content-toggled{
+  margin-left: 345px;
+  margin-right: 25px;
+  width: auto;
+}
+
+#img-usuario{
+  margin-right: 10px;
+  height: 100%;
+  width: 29px;
 }
