@@ -16,6 +16,7 @@ session_start();
         <link href="vista/css/fuentes.css" rel="stylesheet">
         <link href="vista/css/index.css" rel="stylesheet">
         <link href="vista/css/navbar_index.css" rel="stylesheet">
+        <link href="vista/css/loading.css" rel="stylesheet">
         <link href="vista/css/auth.css" rel="stylesheet">
         <link href="vista/css/jquery-confirm.css" rel="stylesheet" type="text/css" />
         
@@ -27,9 +28,7 @@ session_start();
         <script type="text/javascript" src="vista/js/jquery-confirm.min.js"></script>
     </head>
     <body>
-
-        <?php include 'vista/navbar.html' ?>
-        <div class="welcome" style="display: none;"></div>
+        <?php include 'vista/sidebar.html' ?>
         <div class="row frmlogeo col-12">
             <section class="col-md-6" id="image-login">
             </section>
@@ -63,5 +62,6 @@ session_start();
                 </article>
             </section>
         </div>
+        <?php include 'vista/loading.html' ?>
     </body>
 </html>

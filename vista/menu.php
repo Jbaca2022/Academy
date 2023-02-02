@@ -31,10 +31,11 @@
     </head>
     <body class="full">
         <!-- Navigation -->
-        <?php  include 'navbar.html'  ?>
+        <?php  include 'sidebar.html'  ?>
         <!--         <div id="datosusuario" data-idusuario="<?= $_SESSION['idv4cima'] ?>" data-login="<?= $_SESSION['u_login'] ?>" data-osimrep="<?= $_SESSION['v4permiso'] ?>"></div> -->
         <!-- Navigation -->
         <!--        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".vent-asistencia">Detalle asistencia</button>-->
-        <h1 style="font-size:100px; text-align:center; margin-top: 35vh; background-color: #83C2D8">BIENVENIDO!!</h1>
+        <!-- <h1 style="font-size:100px; text-align:center; margin-top: 35vh; background-color: #83C2D8">BIENVENIDO!!</h1> -->
+        
     </body>
 </html>        

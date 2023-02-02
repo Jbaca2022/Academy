@@ -2,11 +2,34 @@
     var permisomododulo;
     permiso();
     modulo();
+    
+    var trigger = $('.cross'),
+    isClosed = false;
+
+    trigger.click(function () {
+     cross();      
+    });
+
+    function cross() {
+      if (isClosed == true) {          
+        trigger.removeClass('is-open');
+        trigger.addClass('is-closed');
+        isClosed = false;
+      } else {   
+        trigger.removeClass('is-closed');
+        trigger.addClass('is-open');
+        isClosed = true;
+      }
+  }
+  
+    $('[data-toggle="offcanvas"]').click(function () {
+        $('#wrapper').toggleClass('toggled');
+    });
 
     function modulo() {
         var idusuario = $("#modulo").data("id");
         console.log($("#modulo").data("id"));
-        console.log('+++');
+        console.log($('#wrapper'));
 
         if (idusuario === "") {
             $(".frmlogeo").css({ display: "block" });
@@ -16,9 +39,7 @@
             $(".welcome").css({ display: "block" });
             $(".frmlogeo").css({ display: "none" });
             $("#frm-cerrar").css({ display: "block" });
-            $('.navbar').css({display: 'inline'});
-            $('.full').css('height','93vh')    
-            $('.full').css('padding-top','7vh')    
+            $('#wrapper').css({display: 'inline'});
         }
     }  
     function permiso() {
@@ -37,6 +58,7 @@
         var usuario = $("#txtusuario").val();
         var password = $("#txtpassword").val();
         if (usuario !== "" && password !== "") {
+            $(".loading").css({ display: "flex" });
             $.post(
                 "/Academy/controlador/load_logeo.php", {
                     caso: 1,
@@ -50,8 +72,7 @@
                         console.log(data[0]._id);
                         console.log('---');
 
-                        $('.navbar').css('display', 'inline');
-                        $('.full').css('padding-top','55px')    
+                        $('#wrapper').css('display', 'inline');
 
                         $('#modulo').data('id', data[0]._id);
                         $('#modulo').data('nombre', data[0]._nombre);
@@ -61,15 +82,20 @@
                         modulo();
                         permiso();
                         $(".frmlogeo").css({ display: "none" });
-
                     } else {
                         $('#errorLog').css('display','block')
                     }
+                    $(".loading").css({ display: "none" });
                 },
                 "json"
-            );
-            // return false;
-        } else {
+                ).fail(function() {
+                    $(".loading").css({ display: "none" });
+                    setTimeout(() => {
+                        alert( "Error de conexión" );
+                    }, 100);
+                })
+                // return false;
+            } else {
             // return false;
         }
     }
