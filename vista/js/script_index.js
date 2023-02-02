@@ -35,7 +35,7 @@
         if (idusuario === "") {
             $(".frmlogeo").css({ display: "block" });
             $(".welcome").css({ display: "none" });
-            // $("#frm-cerrar").css({ display: "none" });
+            $("#frm-cerrar").css({ display: "none" });
         } else {
             $(".welcome").css({ display: "block" });
             $(".frmlogeo").css({ display: "none" });
