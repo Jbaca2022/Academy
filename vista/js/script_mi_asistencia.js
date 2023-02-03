@@ -6,6 +6,7 @@ $(document).ready(function () {
             caso: 1, idusuario: idusuario
         }, function (data) {
             $('#calendar').append(cargar_calendario(data));
+            mes_button();
         }, 'json');
     }
     function cargar_calendario(data) {
@@ -19,7 +20,7 @@ $(document).ready(function () {
                     mes = data[i]['f_nombremes'];
                     semana = data[i]['semana'];
                     html += '<div class="mes">' + data[i]['f_nombremes'] + '</div>';
-                    html += '<table class="table table-bordered" id=#"' + data[i]['f_nombremes'] + '">';
+                    html += '<table class="table table-bordered" id="' + data[i]['f_nombremes'] + '">';
                     html += '  <tr class="cabecera">';
                     html += '		<th colspan="2" class="text-center bg-primary">LUNES</th>';
                     html += '		<th colspan="2" class="text-center bg-primary">MARTES</th>';
@@ -139,12 +140,22 @@ $(document).ready(function () {
         html += '	</div>';
         return html;
     };
-    $(".mes-button").click(function () {
-        
-    });
 });
 
-$(window).resize(function() {
+function mes_button(){
     if (window.innerWidth <= 536) $('.mes').addClass('mes-button');
     else $('.mes').removeClass('mes-button');
+    $(".mes-button").click( button => {
+        if (button.target.classList.contains('calendar-open')) {
+            $('#' + button.target.innerHTML).css(({ display: "none" }));
+            button.target.classList.remove("calendar-open")
+        } else{
+            $('#' + button.target.innerHTML).css(({ display: "block" }));
+            button.target.classList.add("calendar-open")
+        }
+    });
+}
+
+$(window).resize(function() {
+    mes_button();
 });

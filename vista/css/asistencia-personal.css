@@ -12,6 +12,14 @@
 .table-bordered{
     font-size: 1.5rem;
     text-align: center;
+    width: 100%;
+    display: block;
+    overflow-x: scroll;
+} 
+
+.table-bordered tbody{
+    width: 100%;
+    display: inline-table;
 } 
 
 h3 {
@@ -41,6 +49,7 @@ h3 {
         display: none;
     }
     .mes{
+        margin-left: 0px;
         cursor: pointer;
         font-size: 1.4rem;
         margin-bottom: 15px;
