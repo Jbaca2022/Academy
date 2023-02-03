@@ -82,7 +82,7 @@
                         console.log('---');
 
                         $('#wrapper').css('display', 'block');
-
+                        $('#wrapper').addClass('toggled');
                         $('#modulo').data('id', data[0]._id);
                         $('#modulo').data('nombre', data[0]._nombre);
                         $('#modulo').data('apellido', data[0]._apellido);

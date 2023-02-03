@@ -23,7 +23,8 @@ session_start();
         <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
         <script type="text/javascript" src="vista/js/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="vista/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="vista/js/script_index.js"></script>
+        <script type="text/javascript" src="vista/js/script_index.js">
+        </script>
         <script type="text/javascript" src="vista/js/bootstrap-submenu.min.js"></script>
         <script type="text/javascript" src="vista/js/jquery-confirm.min.js"></script>
     </head>
@@ -63,6 +64,12 @@ session_start();
                 </article>
             </section>
         </div>
+        <script>
+            var idusuario = $("#modulo").data("id");
+            if (idusuario !== "") {
+                $('#wrapper').addClass('toggled');
+            }
+        </script>
         <?php include 'vista/loading.html' ?>
     </body>
 </html>

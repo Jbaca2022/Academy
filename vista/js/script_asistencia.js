@@ -2,6 +2,12 @@ $(document).ready(function () {
 
     cargar_asistencia();
     console.log($('#modulo').data('id'));
+    $('[data-toggle="offcanvas"]').click(function () {
+        setTimeout(() => {
+            user_resize()
+        }, 600);
+    });
+    user_resize()
     function cargar_asistencia() {
         $.post('../../controlador/load_asistencia.php', {
             caso: 1
@@ -194,7 +200,8 @@ $(document).ready(function () {
                 html += "   </td>";
                 html += "</tr>";
                 }
-                $("#tbody-detalle-asistencia").html(html);           
+                $("#tbody-detalle-asistencia").html(html); 
+                user_resize()
             } 
         }, 'json');
 
@@ -268,4 +275,22 @@ $(document).ready(function () {
             }
         });
     });
+});
+function user_resize(){
+    if (window.innerWidth <= 1153 || $('#wrapper')[0].classList.contains('toggled') && window.innerWidth <= 1330) {
+        $('.user-content').addClass('col-md-12');
+        $('.user-content').addClass('small-toggle');
+        $('.user-content').removeClass('col-md-3');
+        $('.table-content').addClass('col-md-12');
+        $('.table-content').removeClass('col-md-9');
+    }else{
+        $('.user-content').addClass('col-md-3');
+        $('.user-content').removeClass('col-md-12');
+        $('.user-content').removeClass('small-toggle');
+        $('.table-content').addClass('col-md-9');
+        $('.table-content').removeClass('col-md-12');
+    };
+}
+$(window).resize(function() {
+    user_resize();
 });

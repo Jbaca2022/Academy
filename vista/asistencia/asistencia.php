@@ -40,64 +40,70 @@
         <!-- Navigation -->
         <div class="col-md-offset-1 col-md-10 cuerpo page-content">
             <div class="row row-cuerpo">
-                <div class="col-xs-4 col-md-4">
-                    <h3>REGISTRO DE ASISTENCIA</h3>
-                </div>
-                <div class="col-xs-5 col-md-5" id="conectividad">
-                </div>
-                <div class="col-xs-3 col-md-3 bg-dark">
-                    <h3 class="text-center reloj" id="reloj">HH:MM:SS AM</h3>
-                </div>
-            </div>
-            <div class="row row-cuerpo">
-                <div class="col-xs-12 col-md-9">
-                    <div class="row">
-                        <div class="col-xs-2 col-md-3">
-                            <select  class="form-control" id="selAsistencia" >
-                                <option value="1">CÓDIGO</option>
-                                <option value="2">APELLIDO</option>
-                            </select>
+                <div class="col-md-9 table-content">
+                    <div class="col-md-12 col-xs-12">
+                        <div class="col-xs-8 col-md-8 no-padding">
+                            <h3>REGISTRO DE ASISTENCIA</h3>
                         </div>
-                        <div class="col-xs-6 col-md-9">
-                            <div class="input-group">
-                                <input type="text" min="0" class="form-control" id="txtAsitencia" data-idalumno="0" data-idanterior="0" disabled/>
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-floppy-disk" id="btn-registrar"></span>
-                                </span>
+                        <div class="col-xs-4 col-md-4" id="conectividad">
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-xs-12">
+                        <div class="row">
+                            <div class="col-xs-4 col-md-3">
+                                <select  class="form-control" id="selAsistencia" >
+                                    <option value="1">CÓDIGO</option>
+                                    <option value="2">APELLIDO</option>
+                                </select>
+                            </div>
+                            <div class="col-xs-8 col-md-9">
+                                <div class="input-group">
+                                    <input type="text" min="0" class="form-control" id="txtAsitencia" data-idalumno="0" data-idanterior="0" disabled/>
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-floppy-disk" id="btn-registrar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <p></p>
+                        <div class="row">
+                            <div class="col-md-12 tbl-asistencia no-padding">
+                                <table id="tbl-asistencia" cellspacing="0" width="100%">
+                                    <thead class="cabecera">
+                                        <tr>
+                                            <th>Documento</th>
+                                            <th>Apellido y Nombres</th>
+                                            <th width="20%">Descripción</th>
+                                            <th>Asistencia</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody-asistencia">
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
-                    <p></p>
-                    <div class="row">
-                        <div class="col-md-12 tbl-asistencia">
-                            <table id="tbl-asistencia" class="display" cellspacing="0" width="100%">
-                                <thead class="cabecera">
-                                    <tr>
-                                        <th>Documento</th>
-                                        <th>Apellido y Nombres</th>
-                                        <th width="20%">Descripción</th>
-                                        <th>Asistencia</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tbody-asistencia">
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-xs-12 col-md-3">
-                    <div class="thumbnail">
-                    <img class="foto" src="../img/foto.png" id="fotopersona" style="background-image: url(0.jpg);"></img>
-                        <div class="caption text-12">
-                            <div class="panel panel-default">
-                                <div class="panel-heading text-center" id="detalle-persona">
-                                    SELECCIONE UN USUARIO
+                <div class="col-md-3 no-padding user-content">
+                    <div class="col-xs-12 col-md-12 bg-dark">
+                        <h3 class="text-center reloj" id="reloj">HH:MM:SS AM</h3>
+                    </div>
+                    <div class="col-xs-12 col-md-12">
+                        <div class="thumbnail">
+                        <img class="foto" src="../img/foto.png" id="fotopersona" style="background-image: url(0.jpg);"></img>
+                            <div class="caption text-12">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading text-center" id="detalle-persona">
+                                        SELECCIONE UN USUARIO
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="row row-cuerpo">
             </div>
         </div>
         <!--        <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".vent-asistencia">Detalle asistencia</button>-->

@@ -1,4 +1,13 @@
+:root {
+    --is-toggled: 0
+}
+  
+#wrapper.toggled {
+    --is-toggled: 1
+}
+
 .cuerpo{
+    overflow-y: auto;
     margin-top: 23px;
     min-height:530px;
     height:100%;
@@ -9,9 +18,17 @@
     border-bottom:2px solid #394552;
 }
 .tbl-asistencia{
-    /*margin-top: -82px;*/
     font-size: 14px;
-}   
+}
+.no-padding{
+    padding-left: 0;
+    padding-right: 0;
+}
+#tbl-asistencia{
+    overflow-y: scroll;
+    height: 65%;
+}
+
 #tbl-asistencia_filter,#tbl-asistencia_length{
     display: none;
 }
@@ -70,4 +87,16 @@ h3{
 .bg-dark{
     color: #ECECEC;
     background: rgb(41, 41, 41);
+}
+
+@media (max-width: 1331px){
+    .small-toggle .bg-dark{
+        background: none;
+    }
+    .small-toggle .bg-dark h3{
+        color: #ECECEC;
+        background: rgb(41, 41, 41);
+        padding: 15px;
+        margin: 15px 0px;
+    }
 }
