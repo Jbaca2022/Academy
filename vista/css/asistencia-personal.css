@@ -29,3 +29,24 @@ h3 {
     height: 89%;
     overflow: auto;
 }
+
+.mes{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 536px){
+    .table{
+        display: none;
+    }
+    .mes{
+        cursor: pointer;
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        text-align: center;
+        padding: 15px;
+        color: #FFF;
+        background-color: #000C38;
+    }
+}

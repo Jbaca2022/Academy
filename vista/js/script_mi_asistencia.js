@@ -6,7 +6,6 @@ $(document).ready(function () {
             caso: 1, idusuario: idusuario
         }, function (data) {
             $('#calendar').append(cargar_calendario(data));
-            console.log(data);
         }, 'json');
     }
     function cargar_calendario(data) {
@@ -19,9 +18,9 @@ $(document).ready(function () {
                 if (mes !== data[i]['f_nombremes']) {
                     mes = data[i]['f_nombremes'];
                     semana = data[i]['semana'];
-                    html += '<div id="mes">' + data[i]['f_nombremes'] + '</div>';
-                    html += '<table width="200" class="table table-bordered">';
-                    html += '  <tr class="' + 'cabecera">';
+                    html += '<div class="mes">' + data[i]['f_nombremes'] + '</div>';
+                    html += '<table class="table table-bordered" id=#"' + data[i]['f_nombremes'] + '">';
+                    html += '  <tr class="cabecera">';
                     html += '		<th colspan="2" class="text-center bg-primary">LUNES</th>';
                     html += '		<th colspan="2" class="text-center bg-primary">MARTES</th>';
                     html += '		<th colspan="2" class="text-center bg-primary">MIÉRCOLES</th>';
@@ -139,5 +138,13 @@ $(document).ready(function () {
         }
         html += '	</div>';
         return html;
-    }
+    };
+    $(".mes-button").click(function () {
+        
+    });
+});
+
+$(window).resize(function() {
+    if (window.innerWidth <= 536) $('.mes').addClass('mes-button');
+    else $('.mes').removeClass('mes-button');
 });

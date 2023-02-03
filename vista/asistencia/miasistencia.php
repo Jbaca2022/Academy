@@ -49,15 +49,8 @@
             <div class="row row-cuerpo calendar-container">
                 <div class="col-md-12">
                     <div class="row">
-                        <div class="col-xs-2 col-md-3">
-                            <select  class="form-control">
-                                <option value="1"></option>
-                                <option value="2"></option>
-                            </select>
-                        </div>
-                        <div class="col-xs-6 col-md-9">
+                        <div class="col-md-12">
                             <div class="input-group">
-                                <input type="text" min="0" class="form-control" id="txtAsitencia" data-idalumno="0" data-idanterior="0" disabled/>
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-floppy-disk" id="btn-registrar"></span>
                                 </span>

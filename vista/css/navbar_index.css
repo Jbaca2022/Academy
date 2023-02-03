@@ -366,13 +366,19 @@
   height: 100%;
   width: 29px;
 }
+.cross-phone{
+  display: none;
+}
 
 @media (max-width: 895px){
+  .cross-phone{
+    display: inline;
+  }
   #wrapper.toggled {
     padding-left: 320px;
   }
   #sidebar-wrapper{
-    max-height: 55vh;
+    height: 100%;;
   }
   #wrapper.toggled #sidebar-wrapper {
     width: 100vw;
