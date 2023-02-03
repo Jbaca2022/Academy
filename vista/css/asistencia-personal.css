@@ -1,5 +1,4 @@
 .cuerpo{
-    padding: 0px 20px;
     margin-top: 23px;
     min-height:530px;
     height:100%;
@@ -8,4 +7,25 @@
     font-family: Aller;
     z-index:1;
     border-bottom:2px solid #394552;
+}
+
+.table-bordered{
+    font-size: 1.5rem;
+    text-align: center;
+} 
+
+h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cabecera th{
+    background: #000C38;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 8px;
+}
+
+.calendar-container{
+    height: 89%;
+    overflow: auto;
 }

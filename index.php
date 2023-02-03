@@ -29,6 +29,7 @@ session_start();
     </head>
     <body>
         <?php include 'vista/sidebar.html' ?>
+        <div class="page-content"></div>
         <div class="row frmlogeo col-12">
             <section class="col-md-6" id="image-login">
             </section>

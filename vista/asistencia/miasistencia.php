@@ -28,7 +28,7 @@
         <script type="text/javascript" src="../js/script_index.js"></script>
 
         <!--PROPIOS-->
-        <link href="../css/asistencia2.0.css" rel="stylesheet" type="text/css" />
+        <link href="../css/asistencia-personal.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="../js/script_mi_asistencia.js"></script>
         <!--PROPIOS-->
         <title></title>
@@ -39,7 +39,39 @@
          <div id="datosusuario" data-idusuario="<?= $_SESSION['id'] ?>"> </div>
         <!-- Navigation -->
         <div class="col-md-offset-1 col-md-10 cuerpo page-content">
-                MI ASISTENCIA
+        <div class="row row-cuerpo">
+                <div class="col-md-12">
+                    <h3>MI ASISTENCIA</h3>
+                </div>
+                <div class="col-xs-5 col-md-5" id="conectividad">
+                </div>
+            </div>
+            <div class="row row-cuerpo calendar-container">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-xs-2 col-md-3">
+                            <select  class="form-control">
+                                <option value="1"></option>
+                                <option value="2"></option>
+                            </select>
+                        </div>
+                        <div class="col-xs-6 col-md-9">
+                            <div class="input-group">
+                                <input type="text" min="0" class="form-control" id="txtAsitencia" data-idalumno="0" data-idanterior="0" disabled/>
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-floppy-disk" id="btn-registrar"></span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="col-12" id="calendar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         </body>
 </html>              
