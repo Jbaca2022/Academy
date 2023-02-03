@@ -1,5 +1,5 @@
 <?php
-include("cnx.php");	
+include("cnx_.php");	
 
 class clssql_asistencia {
 
