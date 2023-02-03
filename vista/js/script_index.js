@@ -44,6 +44,14 @@
         }
     }  
     function permiso() {
+        var idrol = $("#modulo").data("rol");
+        if (idrol == "ALUMNO") {
+            $("#NavbarRegistroAsistencia").css({ display: "none" });
+            $("#NavbarMiAsistencia").css({ display: "block" });
+        } else {
+            $("#NavbarRegistroAsistencia").css({ display: "block" });
+            $("#NavbarMiAsistencia").css({ display: "none" });
+        }
     }
 
     $("#txtusuario,#txtpassword").keypress(function(e) {
