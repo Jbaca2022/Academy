@@ -40,7 +40,7 @@
             $(".welcome").css({ display: "block" });
             $(".frmlogeo").css({ display: "none" });
             $("#frm-cerrar").css({ display: "block" });
-            $('#wrapper').css({display: 'inline'});
+            $('#wrapper').css({display: 'block'});
         }
     }  
     function permiso() {
@@ -73,7 +73,7 @@
                         console.log(data[0]._id);
                         console.log('---');
 
-                        $('#wrapper').css('display', 'inline');
+                        $('#wrapper').css('display', 'block');
 
                         $('#modulo').data('id', data[0]._id);
                         $('#modulo').data('nombre', data[0]._nombre);

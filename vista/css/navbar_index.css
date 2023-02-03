@@ -15,7 +15,6 @@
 
 .cross-container{
     top: 0;
-    height: 7vh;
     background-color: #fff;
     position: fixed;
     width: 100%;
@@ -70,11 +69,18 @@
     top: 70px;
     position: absolute;
     width: auto;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
-    margin-right: -320px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
 }
 
 /*-------------------------------*/
