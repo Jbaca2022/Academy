@@ -25,6 +25,7 @@
     padding-right: 0;
 }
 #tbl-asistencia{
+    display: block;
     overflow-y: scroll;
     height: 65%;
 }
@@ -33,6 +34,8 @@
     display: none;
 }
 .cabecera {
+    position: sticky;
+    top: 0;
     background: #000C38;
     color: #FFFFFF;
 }
