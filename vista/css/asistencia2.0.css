@@ -25,7 +25,6 @@
     padding-right: 0;
 }
 #tbl-asistencia{
-    display: block;
     overflow-y: scroll;
     height: 65%;
 }
@@ -34,6 +33,7 @@
     display: none;
 }
 .cabecera {
+    width: 100%;
     position: sticky;
     top: 0;
     background: #000C38;
@@ -57,8 +57,6 @@
 .cronometro{   
     font-family: 'LetraDigital';
     font-size: 27px;
-    
-    
 }
 .foto{
     background-repeat: no-repeat;
@@ -69,7 +67,6 @@
     cursor: pointer;
 }
 .resaltar{
-    /*background-color: rgb(26, 128, 239);*/
     color: rgb(26, 128, 239);
     font-weight: bold;
 }
@@ -101,5 +98,11 @@ h3{
         background: rgb(41, 41, 41);
         padding: 15px;
         margin: 15px 0px;
+    }
+}
+
+@media (max-width: 506px){
+    #tbl-asistencia{
+        display: block;
     }
 }
