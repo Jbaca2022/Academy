@@ -46,12 +46,22 @@
             </div>
             <div class="row row-cuerpo calendar-container">
                 <div class="col-md-12">
+                    <div class="row selectalumno">
+                        <select name="" id="selectalumno" data-live-search="true" title="Alumno" class="selectpicker col-md-5 col-sm-6 col-xs-12"></select>
+                    </div>
+                    <div class="row" style="overflow: hidden; height: 1px;">
+                        <div class="col-md-12">
+                            <span class="input-group-addon">
+                                <span></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="text-center col-md-12">
+                        <h3 id="nameAlumno"></h3>
+                    </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <select name="" id="selectalumno" data-live-search="true" title="Alumno" class="selectpicker"></select>
-                            <div id="data">
-
-                            </div>
+                            <div class="col-12" id="calendar"></div>
                         </div>
                     </div>
                 </div>
