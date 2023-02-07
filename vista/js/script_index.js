@@ -48,9 +48,17 @@
         if (idrol == "ALUMNO") {
             $("#NavbarRegistroAsistencia").css({ display: "none" });
             $("#NavbarMiAsistencia").css({ display: "block" });
+            $("#NavbarAsistenciaMovil").css({ display: "none" });
+            $("#NavbarAsistenciaIndividual").css({ display: "none" });
+            $("#NavbarTardanza").css({ display: "none" });
+            $("#NavbarInasistencia").css({ display: "none" });
         } else {
             $("#NavbarRegistroAsistencia").css({ display: "block" });
             $("#NavbarMiAsistencia").css({ display: "none" });
+            $("#NavbarAsistenciaMovil").css({ display: "block" });
+            $("#NavbarAsistenciaIndividual").css({ display: "block" });
+            $("#NavbarTardanza").css({ display: "block" });
+            $("#NavbarInasistencia").css({ display: "block" });
         }
     }
 
