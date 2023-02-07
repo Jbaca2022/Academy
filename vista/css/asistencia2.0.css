@@ -102,7 +102,13 @@ h3{
 }
 
 @media (max-width: 506px){
-    #tbl-asistencia{
-        display: block;
+    .tbl-asistencia{
+        display: none;
+    }
+    .selAsistencia{
+        display: none;
+    }
+    #inputAsistencia{
+        width: 100%;
     }
 }

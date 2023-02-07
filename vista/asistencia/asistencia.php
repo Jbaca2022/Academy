@@ -50,13 +50,13 @@
                     </div>
                     <div class="col-md-12 col-xs-12">
                         <div class="row">
-                            <div class="col-xs-4 col-md-3">
+                            <div class="col-xs-4 col-md-3 selAsistencia">
                                 <select  class="form-control" id="selAsistencia" >
                                     <option value="1">CÓDIGO</option>
                                     <option value="2">APELLIDO</option>
                                 </select>
                             </div>
-                            <div class="col-xs-8 col-md-9">
+                            <div class="col-xs-8 col-md-9" id="inputAsistencia">
                                 <div class="input-group">
                                     <input type="text" min="0" class="form-control" id="txtAsitencia" data-idalumno="0" data-idanterior="0" disabled/>
                                     <span class="input-group-addon">
