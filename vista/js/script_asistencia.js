@@ -45,7 +45,7 @@ $(document).ready(function () {
                     htmlCard += '               <p> DNI: ' + data[i]._documento + '</p>'
                     htmlCard += '           </div>'
                     htmlCard += '           <div class="card-check">'
-                    htmlCard += '               <span data-id="' + data[i]._id + '" class="glyphicon glyphicon-ok span-registrar-card"></span>'
+                    htmlCard += '               <span data-id="' + data[i]._documento + '" class="glyphicon glyphicon-ok span-registrar-card"></span>'
                     htmlCard += '           </div>'
                     htmlCard += '       </div>'
                     htmlCard += '   </div>'
@@ -116,7 +116,6 @@ $(document).ready(function () {
     function registrar_asistencia() {
         if ($("#selAsistencia option:selected").val() == 1) {
             id = Number($("#txtAsitencia").val());
-
         }
         if ($("#selAsistencia option:selected").val() == 2) {
             id = $("#txtAsitencia").data("idalumno");
@@ -137,6 +136,7 @@ $(document).ready(function () {
         }, function (data) {
             actualizarFila(id);
             cargarDetalles(id);
+            console.log(data)
         }, 'json');
     });
 
