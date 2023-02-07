@@ -29,7 +29,7 @@
 
         <!--PROPIOS-->
         <link href="../css/asistencia-personal.css" rel="stylesheet" type="text/css" />
-        <script type="text/javascript" src="../js/script_mi_asistencia.js"></script>
+        <script type="text/javascript" src="../js/script_asistenciaindividual.js"></script>
         <!--PROPIOS-->
         <title></title>
     </head>
@@ -41,26 +41,17 @@
         <div class="col-md-offset-1 col-md-10 cuerpo page-content">
         <div class="row row-cuerpo">
                 <div class="col-md-12">
-                    <h3>MI ASISTENCIA</h3>
-                </div>
-                <div class="col-xs-5 col-md-5" id="conectividad">
+                    <h3>ASISTENCIA POR ALUMNO </h3>
                 </div>
             </div>
             <div class="row row-cuerpo calendar-container">
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="input-group">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-floppy-disk" id="btn-registrar"></span>
-                                </span>
+                            <select name="" id="selectalumno" data-live-search="true" title="Alumno" class="selectpicker"></select>
+                            <div id="data">
+
                             </div>
-                        </div>
-                    </div>
-                    <p></p>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="col-12" id="calendar"></div>
                         </div>
                     </div>
                 </div>
