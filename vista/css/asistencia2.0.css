@@ -88,6 +88,9 @@ h3{
     color: #ECECEC;
     background: rgb(41, 41, 41);
 }
+#card-container{
+    display: none;
+}
 
 @media (max-width: 1331px){
     .small-toggle .bg-dark{
@@ -111,4 +114,30 @@ h3{
     #inputAsistencia{
         width: 100%;
     }
+    #card-container{
+        display: block;
+    }
+}
+
+.card {
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    margin-bottom: 5px;
+}
+.card-body {
+    min-height: 1px;
+    padding: 1.25rem;
+    display: flex;
+}
+.card-content{
+    width: 75%;
+}
+.card-check{
+    font-size: 25px;
+    width: 25%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }

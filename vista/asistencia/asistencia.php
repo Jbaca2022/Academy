@@ -82,6 +82,7 @@
                                     </tbody>
                                 </table>
                             </div>
+                            <div class="col-md-12" id="card-container"></div>
                         </div>
                     </div>
                 </div>

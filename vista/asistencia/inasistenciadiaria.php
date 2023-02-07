@@ -38,7 +38,7 @@
         <?php  include '../sidebar.html'  ?>
          <div id="datosusuario" data-idusuario="<?= $_SESSION['id'] ?>"> </div>
         <!-- Navigation -->
-        <div class="col-md-offset-1 col-md-10 cuerpo page-content">
+        <div class="col-md-offset-1 col-md-10 col-sm-12 col-xs-12 cuerpo page-content">
         <div class="row row-cuerpo">
                 <div class="col-md-12">
                     <h3>INASISTENCIA DIARIA</h3>
@@ -48,10 +48,10 @@
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12">
-
-                            <input type="date" name="" id="txtfecha" value="<?= date('Y-m-d') ?>">
+                            <div class="row justify-end">
+                                <input type="date" class="col-md-3 col-sm-6 col-xs-12" name="" id="txtfecha" value="<?= date('Y-m-d') ?>">
+                            </div>
                             <div id="data">
-
                             </div>
                         </div>
                     </div>

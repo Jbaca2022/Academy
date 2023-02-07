@@ -33,6 +33,11 @@ h3 {
     padding: 8px;
 }
 
+#txtfecha{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 .calendar-container{
     height: 89%;
     overflow: auto;
@@ -44,7 +49,7 @@ h3 {
     margin-bottom: 5px;
 }
 
-.selectalumno{
+.justify-end{
     display: flex;
     justify-content: end;
     margin-bottom: 10px;

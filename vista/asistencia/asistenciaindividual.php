@@ -46,7 +46,7 @@
             </div>
             <div class="row row-cuerpo calendar-container">
                 <div class="col-md-12">
-                    <div class="row selectalumno">
+                    <div class="row justify-end">
                         <select name="" id="selectalumno" data-live-search="true" title="Alumno" class="selectpicker col-md-5 col-sm-6 col-xs-12"></select>
                     </div>
                     <div class="row" style="overflow: hidden; height: 1px;">
