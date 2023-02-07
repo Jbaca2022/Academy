@@ -24,7 +24,7 @@
     padding-left: 0;
     padding-right: 0;
 }
-#tbl-asistencia{
+#tbl-asistencia, #card-container {
     overflow-y: scroll;
     height: 65%;
 }
@@ -109,7 +109,8 @@ h3{
         display: none;
     }
     .selAsistencia{
-        display: none;
+        width: 100%;
+        margin-bottom: 10px;
     }
     #inputAsistencia{
         width: 100%;
