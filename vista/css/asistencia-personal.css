@@ -44,6 +44,12 @@ h3 {
     margin-bottom: 5px;
 }
 
+.selectalumno{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 10px;
+}
+
 @media (max-width: 536px){
     .table{
         display: none;

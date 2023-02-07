@@ -48,13 +48,11 @@
             </div>
             <div class="row row-cuerpo calendar-container">
                 <div class="col-md-12">
-                    <div class="row">
+                    <div class="row" style="overflow: hidden; height: 1px;">
                         <div class="col-md-12">
-                            <div class="input-group">
-                                <span class="input-group-addon">
-                                    <span class="glyphicon glyphicon-floppy-disk" id="btn-registrar"></span>
-                                </span>
-                            </div>
+                            <span class="input-group-addon">
+                                <span></span>
+                            </span>
                         </div>
                     </div>
                     <p></p>
