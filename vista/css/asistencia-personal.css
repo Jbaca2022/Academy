@@ -55,6 +55,14 @@ h3 {
     margin-bottom: 10px;
 }
 
+.date-group input{
+    width: 100%;
+}
+
+.date-group{
+    padding-left: 0;
+    padding-right: 0;
+}
 @media (max-width: 536px){
     .table{
         display: none;

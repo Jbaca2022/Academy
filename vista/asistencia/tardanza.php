@@ -41,20 +41,48 @@
         <div class="col-md-offset-1 col-md-10 cuerpo page-content">
         <div class="row row-cuerpo">
                 <div class="col-md-12">
-                    <h3>TARDANZA</h3>
+                    <div class="col-md-12">
+                        <h3>TARDANZA</h3>
+                    </div>
                 </div>
             </div>
             <div class="row row-cuerpo calendar-container">
                 <div class="col-md-12">
                     <div class="row">
-                        <div class="col-md-12">
-
-                            <input type="date" name="" id="txtfechainicio" value="<?= date('Y-m-d') ?>">
-                            <input type="date" name="" id="txtfechafin" value="<?= date('Y-m-d') ?>">
-                            <input type="time" name="" id="txttardanza" value="08:00">
-                            <div id="data">
-
+                        <div class="col-md-12 date-group">
+                            <div class="col-md-5 col-sm-5 col-xs-4">
+                                <input type="date" name="" id="txtfechainicio" value="<?= date('Y-m-d') ?>">
                             </div>
+                            <div class="col-md-5 col-sm-5 col-xs-4">
+                                <input type="date" name="" id="txtfechafin" value="<?= date('Y-m-d') ?>">
+                            </div>
+                            <div class="col-md-5¿2 col-sm-2 col-xs-4">
+                                <input type="time" name="" id="txttardanza" value="08:00">
+                            </div>
+                            <div class="row" style="overflow: hidden; height: 1px;">
+                                <div class="col-md-12">
+                                    <span class="input-group-addon">
+                                        <span></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p></p>
+                    <div class="row">
+                        <div class="col-md-12 tbl-asistencia">
+                            <table id="tbl-tardanza" cellspacing="0" width="100%">
+                                <thead class="cabecera">
+                                    <tr>
+                                        <th>Apellido y Nombres</th>
+                                        <th>Aula</th>
+                                        <th>Carrera</th>
+                                        <th>Tardanza</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tbody-tardanza">
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>

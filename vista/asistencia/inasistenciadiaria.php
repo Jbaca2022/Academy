@@ -54,6 +54,13 @@
                             <div class="row justify-end">
                                 <input type="date" class="col-md-3 col-sm-6 col-xs-12" name="" id="txtfecha" value="<?= date('Y-m-d') ?>">
                             </div>
+                            <div class="row" style="overflow: hidden; height: 1px;">
+                                <div class="col-md-12">
+                                    <span class="input-group-addon">
+                                        <span></span>
+                                    </span>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-md-12 tbl-asistencia">
                                     <table id="tbl-inasistencia" cellspacing="0" width="100%">

@@ -12,12 +12,22 @@ $(document).ready(function () {
             caso: caso, fechainicio: fechainicio, fechafin: fechafin, tardanza: tardanza
         }, function (data) {
             if (data != null) {
+                console.log(data[1])
                 var html = '';
                 for (var i = 0; i < data.length; i++) {
-                    html += '-' + data[i].idpersona + ' - ' + data[i].alumno + ' - ' + data[i].aula + ' - ' + data[i].carrera + ' - ' + data[i].telefono + '<br> ';
+                    html += '<tr class="tr-persona" id="'+ data[i].idpersona+'" data-nombre="'+ data[i].alumno +'"> '
+                    html += '<td class="text-center">' + data[i].alumno + "</td>";
+                    html += '<td class="text-center">' + data[i].aula + "</td>";
+                    html += '<td class="text-center">' + data[i].carrera + "</td>";
+                    html += '<td class="text-center">' + data[i].tardanza + "</td>";
+                    html += "</tr>"; 
                 }
-                $('#data').html(html);
-                $("#data").selectpicker('refresh');
+                $('#tbody-tardanza').html(html);
+                $("#tbl-tardanza").DataTable({
+                    searching: false,
+                    ordering: false,
+                    bLengthChange: false
+                });
             }
         }, 'json');
     }
