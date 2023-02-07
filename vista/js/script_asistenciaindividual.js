@@ -27,6 +27,7 @@ $(document).ready(function () {
         }, function (data) {
             if (data != null) {
                 $('#calendar').append(cargar_calendario(data));
+                mes_button();
             }
         }, 'json');
     }
@@ -164,3 +165,20 @@ $(document).ready(function () {
     };
 });
 
+function mes_button(){
+    if (window.innerWidth <= 536) $('.mes').addClass('mes-button');
+    else $('.mes').removeClass('mes-button');
+    $(".mes-button").click( button => {
+        if (button.target.classList.contains('calendar-open')) {
+            $('#' + button.target.innerHTML).css(({ display: "none" }));
+            button.target.classList.remove("calendar-open")
+        } else{
+            $('#' + button.target.innerHTML).css(({ display: "block" }));
+            button.target.classList.add("calendar-open")
+        }
+    });
+}
+
+$(window).resize(function() {
+    mes_button();
+});
