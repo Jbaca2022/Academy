@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    cargar_asistencia()
     function cargar_asistencia() {
         $.post('../../controlador/load_asistencia.php', {
             caso: 1

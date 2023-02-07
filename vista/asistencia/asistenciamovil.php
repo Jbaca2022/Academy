@@ -29,7 +29,7 @@
 
         <!--PROPIOS-->
         <link href="../css/asistencia2.0.css" rel="stylesheet" type="text/css" />
-        <script type="text/javascript" src="../js/script_asistencia.js"></script>
+        <script type="text/javascript" src="../js/script_asistencia_movil.js"></script>
         <!--PROPIOS-->
         <title></title>
     </head>
