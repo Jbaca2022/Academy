@@ -67,21 +67,7 @@
                         </div>
                         <p></p>
                         <div class="row">
-                            <div class="col-md-12 tbl-asistencia no-padding">
-                                <table id="tbl-asistencia" cellspacing="0" width="100%">
-                                    <thead class="cabecera">
-                                        <tr>
-                                            <th>Documento</th>
-                                            <th>Apellido y Nombres</th>
-                                            <th width="20%">Descripción</th>
-                                            <th>Asistencia</th>
-                                            <th></th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="tbody-asistencia">
-                                    </tbody>
-                                </table>
-                            </div>
+                            <div class="col-md-12" id="card-container"></div>
                         </div>
                     </div>
                 </div>

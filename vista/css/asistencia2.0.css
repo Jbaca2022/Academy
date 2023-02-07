@@ -88,9 +88,6 @@ h3{
     color: #ECECEC;
     background: rgb(41, 41, 41);
 }
-#card-container{
-    display: none;
-}
 
 @media (max-width: 1331px){
     .small-toggle .bg-dark{
@@ -105,18 +102,12 @@ h3{
 }
 
 @media (max-width: 506px){
-    .tbl-asistencia{
-        display: none;
-    }
     .selAsistencia{
         width: 100%;
         margin-bottom: 10px;
     }
     #inputAsistencia{
         width: 100%;
-    }
-    #card-container{
-        display: block;
     }
 }
 

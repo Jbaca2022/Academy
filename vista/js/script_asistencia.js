@@ -33,25 +33,6 @@ $(document).ready(function () {
                 $("#txtAsitencia").prop("disabled", false);
                 //$('#selAsistencia').prop('disabled', false);
                 $("#txtAsitencia").focus();      
-                
-                //Cards
-                var htmlCard = '';
-                for (var i = 0; i < data.length; i++){
-                    htmlCard += '<div class="col-sm-12 no-padding">'
-                    htmlCard += '   <div class="card">'
-                    htmlCard += '       <div class="card-body">'
-                    htmlCard += '           <div class="card-content">'
-                    htmlCard += '               <h5>' + data[i]._rol + ' - ' + data[i]._nombre + '</h5>'
-                    htmlCard += '               <p> DNI: ' + data[i]._documento + '</p>'
-                    htmlCard += '           </div>'
-                    htmlCard += '           <div class="card-check">'
-                    htmlCard += '               <span data-id="' + data[i]._documento + '" class="glyphicon glyphicon-ok span-registrar-card"></span>'
-                    htmlCard += '           </div>'
-                    htmlCard += '       </div>'
-                    htmlCard += '   </div>'
-                    htmlCard += '</div>'
-                }
-                $('#card-container').html(htmlCard)
             } 
         }, 'json');
     }
@@ -128,17 +109,6 @@ $(document).ready(function () {
             cargarDetalles(id);
         }, 'json');
     }
-    $("#card-container").on("click", ".span-registrar-card", function () {
-        id = $(this).data('id')
-        $.post('../../controlador/load_asistencia.php', {
-            caso: 5,
-            id: id
-        }, function (data) {
-            actualizarFila(id);
-            cargarDetalles(id);
-            console.log(data)
-        }, 'json');
-    });
 
     $("#btn-registrar").on("click", function () {
         registrar_asistencia();
