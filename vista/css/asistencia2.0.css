@@ -80,6 +80,10 @@
 h3{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.title{
+    padding-left: 15px;
+    padding-right: 15px;
+}
 .panel{
     margin-bottom: 0;
 }

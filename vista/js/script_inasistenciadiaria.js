@@ -8,10 +8,19 @@ $(document).ready(function () {
             if (data != null) {
                 var html = '';
                 for (var i = 0; i < data.length; i++) {
-                    html += '-' + data[i].idpersona + ' - ' + data[i].alumno + ' - ' + data[i].aula + ' - ' + data[i].carrera + ' - ' + data[i].telefono + '<br> ';
+                    html += '<tr class="tr-persona" id="'+ data[i].idpersona+'" data-nombre="'+ data[i].alumno +'"> '
+                    html += '<td class="text-center">' + data[i].alumno + "</td>";
+                    html += '<td class="text-center">' + data[i].aula + "</td>";
+                    html += '<td class="text-center">' + data[i].carrera + "</td>";
+                    html += '<td class="text-center">' + data[i].telefono + "</td>";
+                    html += "</tr>";  
                 }
-                $('#data').html(html);
-                $("#data").selectpicker('refresh');
+                $('#tbody-inasistencia').html(html);
+                $("#tbl-inasistencia").DataTable({
+                    searching: false,
+                    ordering: false,
+                    bLengthChange: false
+                });
             }
         }, 'json');
     }

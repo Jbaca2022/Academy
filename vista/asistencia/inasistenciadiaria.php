@@ -28,6 +28,7 @@
         <script type="text/javascript" src="../js/script_index.js"></script>
 
         <!--PROPIOS-->
+        <link href="../css/asistencia2.0.css" rel="stylesheet" type="text/css" />
         <link href="../css/asistencia-personal.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="../js/script_inasistenciadiaria.js"></script>
         <!--PROPIOS-->
@@ -39,9 +40,11 @@
          <div id="datosusuario" data-idusuario="<?= $_SESSION['id'] ?>"> </div>
         <!-- Navigation -->
         <div class="col-md-offset-1 col-md-10 col-sm-12 col-xs-12 cuerpo page-content">
-        <div class="row row-cuerpo">
+            <div class="row row-cuerpo">
                 <div class="col-md-12">
-                    <h3>INASISTENCIA DIARIA</h3>
+                    <div class="col-md-12">
+                        <h3>INASISTENCIA DIARIA</h3>
+                    </div>
                 </div>
             </div>
             <div class="row row-cuerpo calendar-container">
@@ -51,7 +54,21 @@
                             <div class="row justify-end">
                                 <input type="date" class="col-md-3 col-sm-6 col-xs-12" name="" id="txtfecha" value="<?= date('Y-m-d') ?>">
                             </div>
-                            <div id="data">
+                            <div class="row">
+                                <div class="col-md-12 tbl-asistencia">
+                                    <table id="tbl-inasistencia" cellspacing="0" width="100%">
+                                        <thead class="cabecera">
+                                            <tr>
+                                                <th>Apellido y Nombres</th>
+                                                <th>Aula</th>
+                                                <th>Carrera</th>
+                                                <th>Teléfono</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbody-inasistencia">
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
