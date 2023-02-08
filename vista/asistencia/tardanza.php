@@ -71,18 +71,8 @@
                     <p></p>
                     <div class="row">
                         <div class="col-md-12 tbl-asistencia">
-                            <table id="tbl-tardanza" cellspacing="0" width="100%">
-                                <thead class="cabecera">
-                                    <tr>
-                                        <th>Apellido y Nombres</th>
-                                        <th>Aula</th>
-                                        <th>Carrera</th>
-                                        <th>Tardanza</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tbody-tardanza">
-                                </tbody>
-                            </table>
+                            
+
                         </div>
                     </div>
                 </div>

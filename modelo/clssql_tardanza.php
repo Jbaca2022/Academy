@@ -50,7 +50,7 @@ class clssql_tardanza {
         left join carrera car on car.id=a.idcarrera
         where cic.estado=true and a.estado=true
         ), dataasistencia as (
-        select idpersona,min(fecha_hora) as asistencia from asistencia where fecha_hora::date=$fechainicio::Date
+        select idpersona,min(fecha_hora) as asistencia from asistencia where fecha_hora::date='$fechainicio'::Date
         group by idpersona
         )
         select dd.idpersona,alumno,aula,carrera,case when asistencia is not null then 1 else 0 end as cantidad,
