@@ -47,6 +47,9 @@
                     <option value="1">MAÑANA</option>
                     <option value="2">TARDE</option>
                 </select>
+                <button type="button" id="btnimprimir" class="btn btn-success btn-lg">
+                    <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Imprimir
+                </button>
             </div>
             <div class="row row-cuerpo calendar-container">
                 <div class="col-md-12">

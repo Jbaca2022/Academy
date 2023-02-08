@@ -168,22 +168,31 @@ $(document).ready(function () {
         html += '	</div>';
         return html;
     };
-});
 
-function mes_button(){
-    if (window.innerWidth <= 536) $('.mes').addClass('mes-button');
-    else $('.mes').removeClass('mes-button');
-    $(".mes-button").click( button => {
-        if (button.target.classList.contains('calendar-open')) {
-            $('#' + button.target.innerHTML).css(({ display: "none" }));
-            button.target.classList.remove("calendar-open")
-        } else{
-            $('#' + button.target.innerHTML).css(({ display: "block" }));
-            button.target.classList.add("calendar-open")
-        }
+    function mes_button(){
+        if (window.innerWidth <= 536) $('.mes').addClass('mes-button');
+        else $('.mes').removeClass('mes-button');
+        $(".mes-button").click( button => {
+            if (button.target.classList.contains('calendar-open')) {
+                $('#' + button.target.innerHTML).css(({ display: "none" }));
+                button.target.classList.remove("calendar-open")
+            } else{
+                $('#' + button.target.innerHTML).css(({ display: "block" }));
+                button.target.classList.add("calendar-open")
+            }
+        });
+    }
+    
+    $(window).resize(function() {
+        mes_button();
     });
-}
-
-$(window).resize(function() {
-    mes_button();
+    $('#btnimprimir').click(function () {
+        var css = '';
+        css += '<link href="../../vista/css/bootstrap-print.css" rel="stylesheet" type="text/css" />';
+        var objeto = '';
+        objeto += $('#divcuerpoimprimir').html(); //obtenemos el objeto a imprimir
+        objeto += '<script>window.print();window.close();</script>';
+        var ventana = window.open('', '_blank'); //abrimos una ventana vacía nueva
+        ventana.document.write(css + objeto);
+    });
 });
