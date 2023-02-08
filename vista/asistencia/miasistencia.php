@@ -39,17 +39,17 @@
          <div id="datosusuario" data-idusuario="<?= $_SESSION['id'] ?>"> </div>
         <!-- Navigation -->
         <div class="col-md-offset-1 col-md-10 cuerpo page-content">
-        <div class="row row-cuerpo">
+            <div class="row row-cuerpo">
                 <div class="col-md-12">
                     <h3>MI ASISTENCIA</h3>
                 </div>
-                <select name="" class="selectpicker col-md-12" id="selTurnoIndividual" >
+                <!-- <select name="" class="selectpicker col-md-3 col-sm-6 col-xs-12" id="selTurnoIndividual" >
                     <option value="1">MAÑANA</option>
                     <option value="2">TARDE</option>
                 </select>
-                <button type="button" id="btnimprimir" class="btn btn-success btn-lg">
+                <button type="button" id="btnimprimir" class="btn btn-success btn-lg col-md-2 col-sm-6 col-xs-12" style="background:#000C38; margin-right:15px;">
                     <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Imprimir
-                </button>
+                </button> -->
             </div>
             <div class="row row-cuerpo calendar-container">
                 <div class="col-md-12">
@@ -62,6 +62,16 @@
                     </div>
                     <p></p>
                     <div class="row">
+                        <div class="row justify-end col-md-12 col-sm-12 col-xs-12" style="padding-right:0;">
+                            <select name="" class="selectpicker col-md-4 col-sm-6 col-xs-12" id="selTurnoIndividual" >
+                                <option value="1">MAÑANA</option>
+                                <option value="2">TARDE</option>
+                            </select>
+                            <span class=col-md-7></span>
+                            <button type="button" id="btnimprimir" class="btn btn-success btn-lg col-md-2 col-sm-6 col-xs-12" style="background:#000C38;">
+                                <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Imprimir
+                            </button>
+                        </div>
                         <div class="col-md-12">
                             <div class="col-12" id="calendar"></div>
                         </div>
