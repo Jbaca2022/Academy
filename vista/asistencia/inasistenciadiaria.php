@@ -53,6 +53,9 @@
                         <div class="col-md-12">
                             <div class="row justify-end">
                                 <input type="date" class="col-md-3 col-sm-6 col-xs-12" name="" id="txtfecha" value="<?= date('Y-m-d') ?>">
+                                <button type="button" id="btnimprimir" class="btn btn-success btn-lg">
+                                    <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Imprimir
+                                </button>
                             </div>
                             <div class="row" style="overflow: hidden; height: 1px;">
                                 <div class="col-md-12">
@@ -61,20 +64,10 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row divimprimir">
                                 <div class="col-md-12 tbl-asistencia">
-                                    <table id="tbl-inasistencia" cellspacing="0" width="100%">
-                                        <thead class="cabecera">
-                                            <tr>
-                                                <th>Apellido y Nombres</th>
-                                                <th>Aula</th>
-                                                <th>Carrera</th>
-                                                <th>Teléfono</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="tbody-inasistencia">
-                                        </tbody>
-                                    </table>
+
+
                                 </div>
                             </div>
                         </div>

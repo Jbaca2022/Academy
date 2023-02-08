@@ -47,11 +47,14 @@
             <div class="row row-cuerpo calendar-container">
                 <div class="col-md-12">
                     <div class="row justify-end">
-                        <select name="" class="selectpicker col-md-5 col-sm-6 col-xs-12" id="selTurnoIndividual" >
+                        <select name="" class="form-control selectpicker col-md-5 col-sm-6 col-xs-12" id="selTurnoIndividual" >
                             <option value="1">MAÑANA</option>
                             <option value="2">TARDE</option>
                         </select>
-                        <select name="" id="selectalumno" data-live-search="true" title="Alumno" class="selectpicker col-md-7 col-sm-6 col-xs-12"></select>
+                        <select name="" id="selectalumno" data-live-search="true" title="Alumno" class="selectpicker form-control col-md-7 col-sm-6 col-xs-12"></select>
+                        <button type="button" id="btnimprimir" class="btn btn-success btn-lg">
+                            <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Imprimir
+                        </button>
                     </div>
                     <div class="row" style="overflow: hidden; height: 1px;">
                         <div class="col-md-12">
@@ -60,12 +63,14 @@
                             </span>
                         </div>
                     </div>
-                    <div class="text-center col-md-12">
-                        <h3 id="nameAlumno"></h3>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="col-12" id="calendar"></div>
+                    <div id="divcuerpoimprimir">
+                        <div class="text-center col-md-12">
+                            <h3 id="nameAlumno"></h3>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-12" id="calendar"></div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -20,10 +20,15 @@ $(document).ready(function () {
         cargar_asistencia($(this).val());
         $('#nameAlumno').html($('#selectalumno option:selected').text())
     });
-
+    $('#selTurnoIndividual').change(function () {
+        cargar_asistencia($('#selectalumno option:selected').val());
+        $('#nameAlumno').html($('#selectalumno option:selected').text())
+    });
     function cargar_asistencia(idpersona) {
+        let idturno = $("#selTurnoIndividual option:selected").val();
+        $('#calendar').html('');
         $.post('../../controlador/load_asistenciaindividual.php', {
-            caso: 2, idpersona: idpersona
+            caso: 3, idpersona: idpersona, idturno: idturno
         }, function (data) {
             if (data != null) {
                 $('#calendar').append(cargar_calendario(data));
@@ -77,14 +82,14 @@ $(document).ready(function () {
                             (data[j]['dow'] == 5) ? Viernes = data[j]['diam']: '';
                             (data[j]['dow'] == 6) ? Sabado = data[j]['diam']: '';
                             (data[j]['dow'] == 0) ? Domingo = data[j]['diam']: '';
-                            hora = (data[j]['horam'] + data[j]['estado']);
+                            hora = (data[j]['horam'] + ' - ' + data[j]['horasalida']);
                             (data[j]['dow'] == 1) ? LunesHora_M = hora: '';
                             (data[j]['dow'] == 2) ? MartesHora_M = hora: '';
                             (data[j]['dow'] == 3) ? MiercolesHora_M = hora: '';
                             (data[j]['dow'] == 4) ? JuevesHora_M = hora: '';
                             (data[j]['dow'] == 5) ? ViernesHora_M = hora: '';
                             (data[j]['dow'] == 6) ? SabadoHora_M = hora: '';
-                            (data[j]['dow'] == 0) ? DomingoHora_M = data[j]['horam'] + data[j]['estado']: '';
+                            (data[j]['dow'] == 0) ? DomingoHora_M = data[j]['horam'] + ' - ' + data[j]['horasalida']: '';
                         } else {
                             semana = data[j]['semana'];
                             if (data[i]['f_nombremes'] == data[j]['f_nombremes']) {
@@ -163,22 +168,31 @@ $(document).ready(function () {
         html += '	</div>';
         return html;
     };
-});
 
-function mes_button(){
-    if (window.innerWidth <= 536) $('.mes').addClass('mes-button');
-    else $('.mes').removeClass('mes-button');
-    $(".mes-button").click( button => {
-        if (button.target.classList.contains('calendar-open')) {
-            $('#' + button.target.innerHTML).css(({ display: "none" }));
-            button.target.classList.remove("calendar-open")
-        } else{
-            $('#' + button.target.innerHTML).css(({ display: "block" }));
-            button.target.classList.add("calendar-open")
-        }
+    function mes_button(){
+        if (window.innerWidth <= 536) $('.mes').addClass('mes-button');
+        else $('.mes').removeClass('mes-button');
+        $(".mes-button").click( button => {
+            if (button.target.classList.contains('calendar-open')) {
+                $('#' + button.target.innerHTML).css(({ display: "none" }));
+                button.target.classList.remove("calendar-open")
+            } else{
+                $('#' + button.target.innerHTML).css(({ display: "block" }));
+                button.target.classList.add("calendar-open")
+            }
+        });
+    }
+    
+    $(window).resize(function() {
+        mes_button();
     });
-}
-
-$(window).resize(function() {
-    mes_button();
+    $('#btnimprimir').click(function () {
+        var css = '';
+        css += '<link href="../../vista/css/bootstrap-print.css" rel="stylesheet" type="text/css" />';
+        var objeto = '';
+        objeto += $('#divcuerpoimprimir').html(); //obtenemos el objeto a imprimir
+        objeto += '<script>window.print();window.close();</script>';
+        var ventana = window.open('', '_blank'); //abrimos una ventana vacía nueva
+        ventana.document.write(css + objeto);
+    });
 });

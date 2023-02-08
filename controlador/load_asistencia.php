@@ -51,6 +51,14 @@ switch ($caso) {
             $Json[] = $row;
         }
         echo json_encode($Json);
-        break;            
+        break;     
+    case 6:
+        $textobuscado = $_POST['textobuscado'];
+        $fila = $obj->listarasistencia_portexto($textobuscado);
+        while ($row = pg_fetch_assoc($fila)) {
+            $Json[] = $row;
+        }
+        echo json_encode($Json);
+        break;                  
     }
     ?>

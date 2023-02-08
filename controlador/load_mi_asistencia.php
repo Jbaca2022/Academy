@@ -13,7 +13,8 @@ $obj = new clssql_mi_asistencia();
 switch ($caso) {
     case 1:
         $idusuario = $_POST['idusuario'];
-        $fila = $obj->listar_mi_asistencia($idusuario);
+        $idturno = $_POST['idturno'];
+        $fila = $obj->listar_mi_asistencia($idusuario, $idturno);
         while ($row = pg_fetch_assoc($fila)) {
             $Json[] = $row;
         }

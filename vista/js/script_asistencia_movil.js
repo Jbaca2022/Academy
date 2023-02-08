@@ -1,8 +1,8 @@
 $(document).ready(function () {
-    cargar_asistencia()
-    function cargar_asistencia() {
+    cargar_asistencia('');
+    function cargar_asistencia(textobuscado) {
         $.post('../../controlador/load_asistencia.php', {
-            caso: 1
+            caso: 6,textobuscado:textobuscado
         }, function (data) {
             if (data != null) {
                 var html = '';
@@ -11,7 +11,7 @@ $(document).ready(function () {
                     html += '   <div class="card">'
                     html += '       <div class="card-body">'
                     html += '           <div class="card-content">'
-                    html += '               <h5>' + data[i]._rol + ' - ' + data[i]._nombre + '</h5>'
+                    html += '               <h5>' + data[i]._rol + ' - ' + data[i]._nombre + ' ' + data[i]._apellido + '</h5>'
                     html += '               <p> DNI: ' + data[i]._documento + '</p>'
                     html += '           </div>'
                     html += '           <div class="card-check">'
@@ -21,8 +21,10 @@ $(document).ready(function () {
                     html += '   </div>'
                     html += '</div>'
                 }
-                $('#card-container').html(html)
-            } 
+                $('#card-container').html(html);
+            } else {
+                $('#card-container').html('');
+            }
         }, 'json');
     }
     
@@ -32,9 +34,21 @@ $(document).ready(function () {
             caso: 5,
             id: id
         }, function (data) {
-            actualizarFila(id);
-            cargarDetalles(id);
-            console.log(data)
+            //actualizarFila(id);
+            //cargarDetalles(id);
+            console.log(data);
+            $.alert({
+                title: 'Mensaje',
+                content: 'Asistencia Registrada',
+                confirmButton: '<button class="btn btn-primary" style="color:  rgba(255,255,255,0.9);">OK</button>',
+                keyboardEnabled: true
+            });
         }, 'json');
+    });
+
+    $('#txtAsitencia').keyup(function () {
+        if ($('#txtAsitencia').val().length> 3 || $('#txtAsitencia').val().length == 0 ) {
+            cargar_asistencia($('#txtAsitencia').val());
+        }
     });
 })
