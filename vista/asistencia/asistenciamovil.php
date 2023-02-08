@@ -41,12 +41,13 @@
         <div class="col-md-offset-1 col-md-10 cuerpo page-content">
             <div class="row row-cuerpo">
                 <div class="col-md-9 table-content">
+                    <div class="col-md-3 no-padding user-content">
+                        <div class="col-xs-12 col-md-12 bg-dark relojMovil">
+                            <h3 class="text-center reloj" id="reloj">HH:MM:SS AM</h3>
+                        </div>
+                    </div>
                     <div class="col-md-12 col-xs-12">
-                        <div class="col-xs-8 col-md-8 no-padding">
-                            <h3>REGISTRO DE ASISTENCIA</h3>
-                        </div>
-                        <div class="col-xs-4 col-md-4" id="conectividad">
-                        </div>
+                        <h3 style="font-size:23px;">REGISTRO DE ASISTENCIA</h3>
                     </div>
                     <div class="col-xs-12">
                         <div class="row">
@@ -62,23 +63,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 no-padding user-content">
-                    <div class="col-xs-12 col-md-12 bg-dark">
-                        <h3 class="text-center reloj" id="reloj">HH:MM:SS AM</h3>
-                    </div>
-                    <div class="col-xs-12 col-md-12">
-                        <div class="thumbnail">
-                        <img class="foto" src="../img/foto.png" id="fotopersona" style="background-image: url(0.jpg);"></img>
-                            <div class="caption text-12">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading text-center" id="detalle-persona">
-                                        SELECCIONE UN USUARIO
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
             <div class="row row-cuerpo">
             </div>

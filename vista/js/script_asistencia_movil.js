@@ -29,7 +29,13 @@ $(document).ready(function () {
             }
         }, 'json');
     }
-    
+    setInterval(function () {
+        let time = new Date()
+        time = time.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true })
+        $("#reloj").html(time.toString());
+        //Pendiente validar cuando sean las 00 horas para actualizar tabla temporal
+        const now = new Date().toLocaleDateString('en-US');
+    }, 1000);
     $("#card-container").on("click", ".span-registrar-card", function () {
         id = $(this).data('id')
         $.post('../../controlador/load_asistencia.php', {

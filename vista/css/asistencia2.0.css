@@ -93,6 +93,11 @@ h3{
     background: rgb(41, 41, 41);
 }
 
+.relojMovil{
+    margin-top: 15px;
+    border-radius: 25px;
+}
+
 @media (max-width: 1331px){
     .small-toggle .bg-dark{
         background: none;
