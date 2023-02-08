@@ -1,9 +1,13 @@
 $(document).ready(function () {
     cargar_asistencia();
+    $('#selTurnoIndividual').change(function () {
+        cargar_asistencia();
+    });
     function cargar_asistencia() {
         let idusuario = $("#modulo").data("id");
+        let idturno = $("#selTurnoIndividual option:selected").val();
         $.post('../../controlador/load_mi_asistencia.php', {
-            caso: 1, idusuario: idusuario
+            caso: 1, idusuario: idusuario, idturno: idturno
         }, function (data) {
             $('#calendar').append(cargar_calendario(data));
             mes_button();
@@ -54,14 +58,14 @@ $(document).ready(function () {
                             (data[j]['dow'] == 5) ? Viernes = data[j]['diam']: '';
                             (data[j]['dow'] == 6) ? Sabado = data[j]['diam']: '';
                             (data[j]['dow'] == 0) ? Domingo = data[j]['diam']: '';
-                            hora = (data[j]['horam'] + data[j]['estado']);
+                            hora = (data[j]['horam'] + ' - ' + data[j]['horasalida']);
                             (data[j]['dow'] == 1) ? LunesHora_M = hora: '';
                             (data[j]['dow'] == 2) ? MartesHora_M = hora: '';
                             (data[j]['dow'] == 3) ? MiercolesHora_M = hora: '';
                             (data[j]['dow'] == 4) ? JuevesHora_M = hora: '';
                             (data[j]['dow'] == 5) ? ViernesHora_M = hora: '';
                             (data[j]['dow'] == 6) ? SabadoHora_M = hora: '';
-                            (data[j]['dow'] == 0) ? DomingoHora_M = data[j]['horam'] + data[j]['estado']: '';
+                            (data[j]['dow'] == 0) ? DomingoHora_M = data[j]['horam'] + ' - ' + data[j]['horasalida']: '';
                         } else {
                             semana = data[j]['semana'];
                             if (data[i]['f_nombremes'] == data[j]['f_nombremes']) {

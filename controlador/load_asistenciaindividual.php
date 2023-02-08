@@ -25,6 +25,15 @@ switch ($caso) {
             $Json[] = $row;
         }
         echo json_encode($Json);
-        break;            
+        break;     
+    case 3:
+        $idpersona = $_POST['idpersona'];
+        $idturno = $_POST['idturno'];
+        $fila = $obj->listar_asistencia_turno($idpersona, $idturno);
+        while ($row = pg_fetch_assoc($fila)) {
+            $Json[] = $row;
+        }
+        echo json_encode($Json);
+        break;                 
     }
     ?>
