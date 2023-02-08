@@ -43,8 +43,10 @@
                 <div class="col-md-12">
                     <h3>MI ASISTENCIA</h3>
                 </div>
-                <div class="col-xs-5 col-md-5" id="conectividad">
-                </div>
+                <select name="" class="selectpicker col-md-12" id="selTurnoIndividual" >
+                    <option value="1">MAÑANA</option>
+                    <option value="2">TARDE</option>
+                </select>
             </div>
             <div class="row row-cuerpo calendar-container">
                 <div class="col-md-12">

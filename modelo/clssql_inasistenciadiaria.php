@@ -1,5 +1,5 @@
 <?php
-include("cnx_.php");	
+include("cnx__.php");	
 
 class clssql_inasistenciadiaria {
 

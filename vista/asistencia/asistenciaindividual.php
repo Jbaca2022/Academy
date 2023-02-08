@@ -47,7 +47,11 @@
             <div class="row row-cuerpo calendar-container">
                 <div class="col-md-12">
                     <div class="row justify-end">
-                        <select name="" id="selectalumno" data-live-search="true" title="Alumno" class="selectpicker col-md-5 col-sm-6 col-xs-12"></select>
+                        <select name="" class="selectpicker col-md-5 col-sm-6 col-xs-12" id="selTurnoIndividual" >
+                            <option value="1">MAÑANA</option>
+                            <option value="2">TARDE</option>
+                        </select>
+                        <select name="" id="selectalumno" data-live-search="true" title="Alumno" class="selectpicker col-md-7 col-sm-6 col-xs-12"></select>
                     </div>
                     <div class="row" style="overflow: hidden; height: 1px;">
                         <div class="col-md-12">
