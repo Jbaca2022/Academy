@@ -53,7 +53,8 @@
                         <div class="col-md-12">
                             <div class="row justify-end">
                                 <input type="date" class="col-md-3 col-sm-6 col-xs-12" name="" id="txtfecha" value="<?= date('Y-m-d') ?>">
-                                <button type="button" id="btnimprimir" class="btn btn-success btn-lg">
+                                <span class=col-md-7></span>
+                                <button type="button" id="btnimprimir" class="btn btn-success btn-lg col-md-2 col-sm-6 col-xs-12" style="background:#000C38; margin-right:15px;">
                                     <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Imprimir
                                 </button>
                             </div>
@@ -66,8 +67,6 @@
                             </div>
                             <div class="row divimprimir">
                                 <div class="col-md-12 tbl-asistencia">
-
-
                                 </div>
                             </div>
                         </div>

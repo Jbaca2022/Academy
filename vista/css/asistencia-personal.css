@@ -77,4 +77,11 @@ h3 {
         color: #FFF;
         background-color: #000C38;
     }
+    #tbl-inasistencia{
+        font-size: 1.5rem;
+        text-align: center;
+        width: 100%;
+        display: block;
+        overflow-x: scroll;
+    }
 }
