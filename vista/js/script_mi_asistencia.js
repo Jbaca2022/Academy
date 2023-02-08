@@ -9,7 +9,7 @@ $(document).ready(function () {
         $.post('../../controlador/load_mi_asistencia.php', {
             caso: 1, idusuario: idusuario, idturno: idturno
         }, function (data) {
-            $('#calendar').append(cargar_calendario(data));
+            $('#calendar').html(cargar_calendario(data));
             mes_button();
         }, 'json');
     }

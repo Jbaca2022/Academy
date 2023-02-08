@@ -28,6 +28,7 @@
         <script type="text/javascript" src="../js/script_index.js"></script>
 
         <!--PROPIOS-->
+        <link href="../css/asistencia2.0.css" rel="stylesheet" type="text/css" />
         <link href="../css/asistencia-personal.css" rel="stylesheet" type="text/css" />
         <script type="text/javascript" src="../js/script_asistenciaindividual.js"></script>
         <!--PROPIOS-->
@@ -46,7 +47,18 @@
             </div>
             <div class="row row-cuerpo calendar-container">
                 <div class="col-md-12">
-                    <div class="row justify-end">
+                    <div class="row justify-end col-md-12 col-sm-12 col-xs-12 no-padding">
+                        <select name="" class="selectpicker col-md-4 col-sm-6 col-xs-12" id="selTurnoIndividual" >
+                            <option value="1">MAÑANA</option>
+                            <option value="2">TARDE</option>
+                        </select>
+                        <select name="" id="selectalumno" data-live-search="true" title="Alumno" class="selectpicker form-control col-md-6 col-sm-6 col-xs-12"></select>
+                        <span class=col-md-7></span>
+                        <button type="button" id="btnimprimir" class="btn btn-success btn-lg col-md-2 col-sm-6 col-xs-12" style="background:#000C38;">
+                            <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Imprimir
+                        </button>
+                    </div>
+                    <!-- <div class="row justify-end">
                         <select name="" class="form-control selectpicker col-md-5 col-sm-6 col-xs-12" id="selTurnoIndividual" >
                             <option value="1">MAÑANA</option>
                             <option value="2">TARDE</option>
@@ -55,7 +67,7 @@
                         <button type="button" id="btnimprimir" class="btn btn-success btn-lg">
                             <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Imprimir
                         </button>
-                    </div>
+                    </div> -->
                     <div class="row" style="overflow: hidden; height: 1px;">
                         <div class="col-md-12">
                             <span class="input-group-addon">
