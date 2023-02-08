@@ -41,6 +41,14 @@ class clssql_asistencia {
 		$rsql = $this->select($sql);
 		return $rsql;		
 	}
+	function listarasistencia_portexto($textobuscado){
+		$sql=" select * from fn_listar_asistencia() where 
+		(translate(_nombre||' '||_apellido,'áéíóúÁÉÍÓÚäëïöüÄËÏÖÜ','aeiouAEIOUaeiouAEIOU')  ilike All (
+			(SELECT ARRAY(select '%' || upper(regexp_split_to_table) || '%'::text
+			FROM regexp_split_to_table('$textobuscado', E'[\\s,]+')) ::text)::text[]))";
+		$rsql = $this->select($sql);
+		return $rsql;		
+	}
 	
 }
 ?>
