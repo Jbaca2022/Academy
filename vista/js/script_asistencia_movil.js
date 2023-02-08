@@ -5,14 +5,16 @@ $(document).ready(function () {
             caso: 6,textobuscado:textobuscado
         }, function (data) {
             if (data != null) {
+                console.log(data)
                 var html = '';
                 for (var i = 0; i < data.length; i++){
                     html += '<div class="col-sm-12 no-padding">'
                     html += '   <div class="card">'
-                    html += '       <div class="card-body">'
+                    html += '       <div class="card-body" id="' + data[i]._documento + '">'
                     html += '           <div class="card-content">'
-                    html += '               <h5>' + data[i]._rol + ' - ' + data[i]._nombre + ' ' + data[i]._apellido + '</h5>'
+                    html += '               <h5>(' + data[i]._rol + ') ' + data[i]._nombre + ' ' + data[i]._apellido + '</h5>'
                     html += '               <p> DNI: ' + data[i]._documento + '</p>'
+                    html += '               <p> Asistencias: <span id="cantidad' + data[i]._documento + '">' + data[i]._asistencia + '</span></p>'
                     html += '           </div>'
                     html += '           <div class="card-check">'
                     html += '               <span data-id="' + data[i]._documento + '" class="glyphicon glyphicon-ok span-registrar-card"></span>'
@@ -36,6 +38,8 @@ $(document).ready(function () {
         }, function (data) {
             //actualizarFila(id);
             //cargarDetalles(id);
+            let valor = $("#" + id + ' #cantidad'+ id).html();
+            $("#" + id + ' #cantidad'+ id).html(parseInt(valor) + 1);
             console.log(data);
             $.alert({
                 title: 'Mensaje',

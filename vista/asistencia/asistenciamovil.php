@@ -48,10 +48,10 @@
                         <div class="col-xs-4 col-md-4" id="conectividad">
                         </div>
                     </div>
-                    <div class="col-md-12 col-xs-12">
+                    <div class="col-xs-12">
                         <div class="row">
-                            <div class="col-xs-8 col-md-9" id="inputAsistencia">
-                                <div class="input-group">
+                            <div class="col-xs-12" id="inputAsistencia">
+                                <div class="input-group col-xs-12">
                                     <input type="text" min="0" class="form-control col-md-10" id="txtAsitencia" data-idalumno="0" data-idanterior="0" />
                                 </div>
                             </div>
