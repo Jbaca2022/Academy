@@ -43,6 +43,11 @@ h3 {
     overflow: auto;
 }
 
+.table-container{
+    height: 79%;
+    overflow: auto;
+}
+
 .mes{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-left: 5px;
@@ -63,6 +68,11 @@ h3 {
     padding-left: 0;
     padding-right: 0;
 }
+
+.tr-persona td{
+    padding-left: 5px;
+}
+
 @media (max-width: 536px){
     .table{
         display: none;

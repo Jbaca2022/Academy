@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row row-cuerpo calendar-container">
+            <div class="row row-cuerpo">
                 <div class="col-md-12">
                     <div class="row">
                         <div class="col-md-12">
@@ -65,7 +65,7 @@
                                     </span>
                                 </div>
                             </div>
-                            <div class="row divimprimir">
+                            <div class="row divimprimir table-container">
                                 <div class="col-md-12 tbl-asistencia">
                                 </div>
                             </div>
