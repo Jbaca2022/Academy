@@ -1,9 +1,9 @@
 <?php 
 	session_start();
 	if (isset($_SESSION['sistema'])){
-		$sistema = array('cima'=>true);
+		$sistema = array('Academy'=>true);
 	}else{
-		$sistema = array('cima'=>false);
+		$sistema = array('Academy'=>false);
 	}
 	$jsonSession[] =  $sistema;
 	

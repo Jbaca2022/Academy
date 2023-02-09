@@ -45,6 +45,7 @@
     }  
     function permiso() {
         var idrol = $("#modulo").data("rol");
+        $("#NavbarTardanza").css({ display: "none" });
         if (idrol == "ALUMNO") {
             $("#NavbarAsistencia").css({ display: "none" });
             $("#NavbarAsistenciaReporte").css({ display: "none" });
