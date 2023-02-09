@@ -71,12 +71,26 @@
                     <p></p>
                     <div class="row">
                         <div class="col-md-12 tbl-asistencia">
-                            
-
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        </body>
+        <div class="modal fade vmodal-detalle">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <center>
+                        <div class="modal-header modalcabecera">
+                            DETALLE
+                        </div>
+                    </center>
+                    <div class="modal-body">
+                        <div id="divdetalledata">
+
+                        </div>
+                    </div>
+                </div>
+            </div>    
+        </div>        
+    </body>
 </html>
