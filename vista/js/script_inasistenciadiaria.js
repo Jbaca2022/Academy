@@ -58,4 +58,3 @@ $(document).ready(function () {
         ventana.document.write(css + objeto);
     });
 });
-
