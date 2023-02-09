@@ -59,7 +59,34 @@ class clssql_tardanza {
         where dd.idpersona not in (1,2,3)
         order by alumno";
 		$rsql = $this->select($sql);
-		return $rsql;		
+		return $rsql;	
+    }        
+    function listar_detalle_asistencia($idpersona,$fechainicio,$fechafin){
+        $sql="
+        select idpersona,to_char((min(fecha_hora)),'hh:mi:ss AM') as asistencia from asistencia where
+        fecha_hora::date between '$fechainicio'::date and '$fechafin'::date
+        and idpersona=$idpersona
+        group by idpersona,fecha_hora::date
+
+        ";
+        $rsql = $this->select($sql);
+        return $rsql;	
+    }            
+    function listar_detalle_tardanza($idpersona,$fechainicio,$fechafin, $tardanza){
+        $sql=" with  dataasistencia as (
+            select idpersona,min(fecha_hora) as asistencia from asistencia where
+            fecha_hora::date between '$fechainicio'::date and '$fechafin'::date
+            and idpersona=$idpersona
+            group by idpersona,fecha_hora::date
+        )
+            select idpersona,asistencia::date as dia,
+            case when (min(asistencia)::time >  '$tardanza'::interval) 
+			then to_char((min(asistencia)::time),'hh:mi:ss AM')::text||' (T)' else (min(asistencia)::time)::text end as asistencia
+            from dataasistencia 
+			group by idpersona,asistencia::date
+        ";
+        $rsql = $this->select($sql);
+        return $rsql;	
 	}
 }
 ?>

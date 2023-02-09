@@ -29,6 +29,30 @@ switch ($caso) {
             $Json[] = $row;
         }
         echo json_encode($Json);
-        break;           
+        break;     
+    case 3:
+        //tardanza
+        $fechainicio = $_POST['fechainicio'];
+        $fechafin = $_POST['fechafin'];
+        $idpersona = $_POST['idpersona'];
+        $tardanza = $_POST['tardanza'];
+        $fila = $obj->listar_detalle_tardanza($idpersona,$fechainicio,$fechafin, $tardanza);
+        while ($row = pg_fetch_assoc($fila)) {
+            $Json[] = $row;
+        }
+        echo json_encode($Json);
+        break;  
+    case 4:
+        //asistencia
+        $fechainicio = $_POST['fechainicio'];
+        $tardanza = $_POST['tardanza'];
+        $fechafin = $_POST['fechafin'];
+        $idpersona = $_POST['idpersona'];        
+        $fila = $obj->listar_detalle_asistencia($idpersona,$fechainicio,$fechafin);
+        while ($row = pg_fetch_assoc($fila)) {
+            $Json[] = $row;
+        }
+        echo json_encode($Json);
+        break;                            
     }
     ?>
